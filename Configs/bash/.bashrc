@@ -43,6 +43,7 @@ alias pip="pip3"
 alias po="poetry"
 alias porun="poetry run"
 alias posh="poetry shell"
+alias pserver="python3 -m http.server"
 
 # ------------------
 # ----  Django  ----
