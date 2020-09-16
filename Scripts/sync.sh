@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Run this script:
 # chmod a+x sync.sh && ./sync_backup.sh
 
