@@ -2,8 +2,8 @@
 jobs=2
 ignore=migrations
 # init-hook="import sys; sys.path = [r'C:\Users\jackal\Desktop\<project>', r'C:\Users\jackal\Desktop\envs\<project>\Lib\site-packages'] + sys.path"
-init-hook="import sys; sys.path = [r'/Users/jackal/Desktop/<project>',r'/Users/jackal/Desktop/envs/<project>/lib/python3.7/site-packages'] + sys.path"
-load-plugins=pylint_django
+init-hook="import sys; sys.path = [r'/Users/jackal/Desktop/<project>',r'/Users/jackal/Desktop/envs/<project-hash>/lib/python3.7/site-packages'] + sys.path"
+# load-plugins=pylint_django
 persistent=yes
 rcfile=
 
@@ -21,7 +21,7 @@ rcfile=
 #   unreachable,
 #   unused-variable
 enable=all
-disable=<"訊息編號">
+disable=<訊息編號>
 '''
   C,
   R,
@@ -50,4 +50,5 @@ ignore-imports=no
 min-similarity-lines=4
 
 [TYPECHECK]
+# used in django-models
 generated-members=REQUEST,_meta,acl_users,aq_parent,id,objects
