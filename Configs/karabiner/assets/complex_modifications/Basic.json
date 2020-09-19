@@ -46,11 +46,11 @@
               ]
             }
           },
-          "to": {
-            "key_code": "right_option"
-          },
           "to_if_alone": {
             "key_code": "delete_forward"
+          },
+          "to": {
+            "key_code": "right_option"
           }
         },
         {
@@ -71,11 +71,11 @@
               ]
             }
           },
-          "to": {
-            "key_code": "right_shift"
-          },
           "to_if_alone": {
             "key_code": "up_arrow"
+          },
+          "to": {
+            "key_code": "right_shift"
           }
         },
         {

@@ -11,10 +11,57 @@ Test Configuration:
   http://en.key-test.ru/
 
 Default Configuration Path:
-  - Karabiner-Elements application
-    ~/.config/karabiner/assets/complex_modifications
-  - Keyboard-Remapping tool
-    ./configs_backup/assets/complex_modifications
+  ~/.config/karabiner/assets/complex_modifications
+
+Configuration Examples:
+  - Normal Change <A-Key> to <B-Key>
+    {
+      "from": {
+        "key_code": "<A-Key>"
+      },
+      "to": {
+        "key_code": "<B-Key>"
+      }
+    }
+  - Normal Change <A-Key> to <Multiple-Prefix> + <B-Key>
+    {
+      "from": {
+        "key_code": "<A-Key>"
+      },
+      "to": {
+        "key_code": "<B-Key>",
+        "modifiers": [
+          "command",
+          "control",
+          "option"
+        ]
+      }
+    }
+  - Change <A-Key> to <B-Key> If Press Alone. Else, trig <C-Key>
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "<A-Key>",
+        "modifiers": {
+          "optional": [
+            "any"
+          ]
+        }
+      },
+      "to_if_alone": {
+        "key_code": "<B-Key>"
+      },
+      "to": {
+        "key_code": "<C-Key>"
+      }
+    },
+  - Disable <A-Key>
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "<A-Key>"
+      }
+    }
 
 Configuration Key Codes Reference:
   - category: Modifier keys

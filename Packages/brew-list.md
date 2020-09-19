@@ -1,0 +1,82 @@
+[x] Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)”
+# cask 管理器 ->  軟體會顯示在啟動器中
+brew install caskroom/cask/brew-cask
+
+brew pin python  # 鎖定 Python 版本
+brew update
+brew cask upgrade
+brew [cask] list
+
+brew info **套件**
+brew search **套件**
+brew cask install **套件**
+brew cleanup —-prune 0 && brew cask cleanup —-prune 0
+brew install wget git git-gui
+htop wget tldr
+tig
+dos2unix
+gpg
+bash-completion zsh-completion nmap tree curl tmux
+influxdb grafana
+gist
+omniplan
+
+
+docker
+brew cask install send-anywhere
+
+brew cask install tableplus
+
+brew cask install dbschema
+name: lanyu
+key: 9bbd2251619a1b92966d0d48950df85f03520
+
+
+# 系統
+brew cask install appcleaner bbedit karabiner-elements sloth snipaste spectacle the-unarchive
+# 辦公
+brew cask install evernote google-chrome mounty opera teamviewer
+# 其他
+brew cask install spotify
+# 開發
+brew cask install atom dbeaver-community docker fork pandoc sequel-pro visual-studio-code
+brew cask install https://raw.githubusercontent.com/Homebrew/homebrew-cask/6a96e5ea44803e52a43c0c89242390f75d1581ab/Casks/kdiff3.rb  # kdiff3
+
+[x] iTerm 2
+
+
+[x] Python 3  -  settings
+
+
+[x] Python 3  -  pip
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py --force-reinstall
+
+[x] Kite
+brew install kite
+
+[x] Redis
+
+
+[x] PostgreSQL 11
+
+
+[x] MySQL
+# 設定 MySQL
+brew install mysql
+vim /usr/local/bin/mysql_config
+'''
+libs="-L$pkglibdir"
+libs="$libs -lmysqlclient -lssl -lcrypto”
+'''
+
+# 設定 openssl
+brew install openssl
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
+
+# MySQL relink
+brew unlink mysql
+brew link --overwrite mysql-connector-c
+brew unlink mysql-connector-c
+brew link --overwrite mysql
