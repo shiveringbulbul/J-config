@@ -1,0 +1,32 @@
+# Image Cache File in Windows OS
+Thumbs.db
+
+# Desktop Services Store in Mac OS
+.DS_Store
+
+# Google Cloud Sync
+.tmp.drivedownload/
+*.driveupload
+
+
+
+# ╔══════════╗
+# ╠  Python  ╣
+# ╚══════════╝
+# Visual Studio Settings
+.vscode/
+
+# Python Byte-compiled
+__pycache__/
+*.py[cod]
+
+# Media, Static
+media/*
+static/*
+
+# Backup, Log
+zen.Backup/*
+zen.Log/*
+
+# Pivates
+zen/*

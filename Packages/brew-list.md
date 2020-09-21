@@ -22,24 +22,50 @@ influxdb grafana
 gist
 omniplan
 
+# 麥克風與攝影機安全監控
+brew cask install oversight
 
-docker
+
 brew cask install send-anywhere
 
 brew cask install tableplus
+
+
+
+
+# 系統
+- 程式監控
+brew cask install sloth
+- 完全解除安裝
+brew cask install appcleaner
+- 鍵盤修改
+brew cask install karabiner-elements
+- 高級截圖
+brew cask install snipaste
+- 視窗分割擺設
+brew cask install spectacle
+- 解壓縮
+brew cask install the-unarchive
+# 辦公
+- 文字編輯器
+brew cask install textmate
+brew cask install evernote google-chrome mounty opera teamviewer
+
+# 開發
+
+- 容器
+brew cask install docker
+- API 調適
+brew cask install postman
+
+
 
 brew cask install dbschema
 name: lanyu
 key: 9bbd2251619a1b92966d0d48950df85f03520
 
 
-# 系統
-brew cask install appcleaner bbedit karabiner-elements sloth snipaste spectacle the-unarchive
-# 辦公
-brew cask install evernote google-chrome mounty opera teamviewer
-# 其他
-brew cask install spotify
-# 開發
+
 brew cask install atom dbeaver-community docker fork pandoc sequel-pro visual-studio-code
 brew cask install https://raw.githubusercontent.com/Homebrew/homebrew-cask/6a96e5ea44803e52a43c0c89242390f75d1581ab/Casks/kdiff3.rb  # kdiff3
 

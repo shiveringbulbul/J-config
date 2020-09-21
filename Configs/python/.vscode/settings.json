@@ -1,0 +1,7 @@
+{
+  "python.pythonPath": "C:\\Users\\<用戶名稱>\\Desktop\\envs\\<專案名稱>\\Scripts\\python.exe",
+  "python.linting.pylintPath": "C:\\Program Files\\Python36\\Scripts\\pylint.exe",
+  "python.formatting.yapfPath": "C:\\Program Files\\Python36\\Scripts\\yapf.exe",
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true,
+}

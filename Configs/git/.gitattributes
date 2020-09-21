@@ -1,0 +1,16 @@
+# front end file
+apps/templates/* linguist-vendored
+templates/* linguist-vendored
+static/* linguist-vendored
+
+# doc or demo file
+documentation/* linguist-vendored
+*.doc* linguist-vendored
+*.xls* linguist-vendored
+*.ppt* linguist-vendored
+*.sql linguist-vendored
+*.txt linguist-vendored
+*.log linguist-vendored
+
+# backup folders
+*zen.backup/*

@@ -1,0 +1,10 @@
+[pycodestyle]
+format = %(path)s  %(row)d:%(col)d  [%(code)s] %(text)s
+max-line-length = 85
+statistics = True
+count = False
+ignore =
+    E133,
+    E303,
+    W503,
+    W504

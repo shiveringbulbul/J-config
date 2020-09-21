@@ -13,6 +13,9 @@ Test Configuration:
 Default Configuration Path:
   ~/.config/karabiner/assets/complex_modifications
 
+Configuration Builder:
+  https://genesy.github.io/karabiner-complex-rules-generator/
+
 Configuration Examples:
   - Normal Change <A-Key> to <B-Key>
     {

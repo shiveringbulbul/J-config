@@ -1,0 +1,53 @@
+[MASTER]
+jobs=2
+ignore=migrations
+# init-hook="import sys; sys.path = [r'C:\Users\jackal\Desktop\<project>', r'C:\Users\jackal\Desktop\envs\<project>\Lib\site-packages'] + sys.path"
+init-hook="import sys; sys.path = [r'/Users/jackal/Desktop/<project>',r'/Users/jackal/Desktop/envs/<project>/lib/python3.7/site-packages'] + sys.path"
+load-plugins=pylint_django
+persistent=yes
+rcfile=
+
+[MESSAGES CONTROL]
+# enable=
+#   F,
+#   E,
+#   anomalous-backslash-in-string,
+#   bad-format-string,
+#   bad-open-mode,
+#   binary-op-exception,
+#   duplicate-key,
+#   global-variable-not-assigned,
+#   unnecessary-semicolon,
+#   unreachable,
+#   unused-variable
+enable=all
+disable=<"訊息編號">
+'''
+  C,
+  R,
+  broad-except,
+  unbalanced-tuple-unpacking,
+  W0222,
+  W0223
+'''
+
+[MISCELLANEOUS]
+# notes=FIXME,TODO,XXX
+
+[REPORTS]
+include-ids=yes
+msg-template={path}:{line}: [{msg_id}({symbol}), {obj}] {msg}
+
+[FORMAT]
+max-line-length=85
+max-module-lines=500
+indent-string='    '
+
+[SIMILARITIES]
+ignore-comments=yes
+ignore-docstrings=yes
+ignore-imports=no
+min-similarity-lines=4
+
+[TYPECHECK]
+generated-members=REQUEST,_meta,acl_users,aq_parent,id,objects
