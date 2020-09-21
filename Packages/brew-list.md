@@ -16,6 +16,7 @@ brew install wget git git-gui
 htop wget tldr
 tig
 dos2unix
+pandoc
 gpg
 bash-completion zsh-completion nmap tree curl tmux
 influxdb grafana
@@ -52,22 +53,28 @@ brew cask install textmate
 brew cask install evernote google-chrome mounty opera teamviewer
 
 # 開發
-
+- 編輯器
+brew cask install atom
+brew cask install visual-studio-code
+- 版本控制輔助
+brew cask install fork
+brew cask install https://raw.githubusercontent.com/Homebrew/homebrew-cask/6a96e5ea44803e52a43c0c89242390f75d1581ab/Casks/kdiff3.rb  # kdiff3
 - 容器
 brew cask install docker
 - API 調適
 brew cask install postman
 
 
-
+# 開發 - 資料庫
+- All
+brew cask install dbeaver-community
+- MySQL
+brew cask install sequel-pro
+- ER Modeling
 brew cask install dbschema
 name: lanyu
 key: 9bbd2251619a1b92966d0d48950df85f03520
 
-
-
-brew cask install atom dbeaver-community docker fork pandoc sequel-pro visual-studio-code
-brew cask install https://raw.githubusercontent.com/Homebrew/homebrew-cask/6a96e5ea44803e52a43c0c89242390f75d1581ab/Casks/kdiff3.rb  # kdiff3
 
 [x] iTerm 2
 
