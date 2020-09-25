@@ -1,0 +1,13 @@
+# 關閉 System Integrity Protection
+
+
+1. 重新開機
+2. 保持壓住 Command (⌘) + R 直到蘋果 logo 出現
+3. 於上方選單 Utilities 開啟 terminal 後輸入
+
+```bash
+# 關閉 SIP
+csrutil disable
+# 確認狀態
+csrutil status
+```
