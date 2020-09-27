@@ -1,5 +1,11 @@
 # import bashrc
+source ~/.oh-my-zsh/oh-my-zsh.sh
+# import bashrc
 source ~/.bashrc
+
+
+
+
 
 # Load version control information
 autoload -Uz vcs_info

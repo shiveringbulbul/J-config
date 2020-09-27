@@ -1,0 +1,2 @@
+# import inputrc
+$include ~/.input/.inputrc

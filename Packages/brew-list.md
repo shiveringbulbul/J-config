@@ -47,13 +47,16 @@ brew cask install snipaste
 brew cask install spectacle
 - 解壓縮
 brew cask install the-unarchive
+- 文字編輯
+brew cask install nano
+brew cask install vim
 # 辦公
-- 文字編輯器
+- 文字編輯
 brew cask install textmate
 brew cask install evernote google-chrome mounty opera teamviewer
 
 # 開發
-- 編輯器
+- 文字編輯
 brew cask install atom
 brew cask install visual-studio-code
 - 版本控制輔助

@@ -10,3 +10,4 @@ Win + M
 Option-Command-Esc：強制結束
 登出
 切換輸入法
+https://blog.ssdnodes.com/blog/cheatsheet-bash-shortcuts/

@@ -1,0 +1,119 @@
+{
+  "title": "【 System 】",
+  "rules": [
+    {
+      "description": "【 System 】Win + Alt + c ＝ 超注音輸入法",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "input_source_unless",
+              "input_sources": [
+                {
+                  "input_mode_id": "tw.superime.inputmethod.zhuyin",
+                  "input_source_id": "tw.superime.inputmethod.ChaozhuyinMacOS.zhuyin",
+                  "language": "zh-Hant"
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "select_input_source": {
+                "input_mode_id": "tw.superime.inputmethod.zhuyin",
+                "input_source_id": "tw.superime.inputmethod.ChaozhuyinMacOS.zhuyin",
+                "language": "zh-Hant"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "【 System 】Win + Alt + spacebar ＝ English Input Method",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "input_source_unless",
+              "input_sources": [
+                {
+                  "language": "en"
+                }
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "select_input_source": {
+                "language": "en"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "【 System 】Win + E ＝ Finder",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "e",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Finder.app"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "【 System 】Alt + L ＝ Launchpad",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Launchpad.app"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

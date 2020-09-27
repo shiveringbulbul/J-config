@@ -1,8 +1,32 @@
 {
-  "title": "Application",
+  "title": "【 Application 】",
   "rules": [
     {
-      "description": "【 Application 】Hyper (Caps-Lock) + A/tom C/hrome E/vernote i/Term L/ine M/essenger T/elegram",
+      "description": "【 Application 】Hyper (Caps-Lock) + Backspace ＝ AppCleaner",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "delete_or_backspace",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_option",
+                "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a AppCleaner.app"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "【 Application 】Hyper (Caps-Lock) + A/tom C/hrome D/atabase E/vernote i/Term L/ine M/essenger P/ostman S/nippetsLab T/elegram",
       "manipulators": [
         {
           "type": "basic",
@@ -39,6 +63,25 @@
           "to": [
             {
               "shell_command": "open -a Google\\ Chrome.app"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_option",
+                "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Dbeaver.app"
             }
           ]
         },
@@ -115,6 +158,44 @@
           "to": [
             {
               "shell_command": "open -a Messenger.app"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "p",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_option",
+                "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Postman.app"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_option",
+                "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a SnippetsLab.app"
             }
           ]
         },
