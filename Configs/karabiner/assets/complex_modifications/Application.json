@@ -1,6 +1,112 @@
 {
   "title": "【 Application 】",
+  "author": "JackaL(shiveringbulbul@hotmail.com)",
+  "homepage": "https://github.com/shiveringbulbul/Jackalization",
+  "hostpage": "https://pqrs.org/osx/karabiner/complex_modifications/",
+  "manual": "https://github.com/shiveringbulbul/Jackalization/tree/master/configurations/karabiner/assets/complex_modifications/",
+  "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/shiveringbulbul/Jackalization/master/configurations/karabiner/assets/complex_modifications/Application.json",
   "rules": [
+    {
+      "description": "【 Hyper 】Esc ＝ Caps-lock ( caps-mode on )",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "caps_mode",
+              "value": 0
+            }
+          ],
+          "from": {
+            "key_code": "escape",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "hold_down_milliseconds": 1000,
+              "key_code": "caps_lock"
+            },
+            {
+              "set_variable": {
+                "name": "caps_mode",
+                "value": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "【 Hyper 】Esc ＝ Caps-lock ( caps-mode off )",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "caps_mode",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "escape",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "hold_down_milliseconds": 1000,
+              "key_code": "caps_lock"
+            },
+            {
+              "set_variable": {
+                "name": "caps_mode",
+                "value": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "【 Hyper 】Caps-lock ＝ Hyper ( Ctrl-Win-Alt-Shift )",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to_if_alone": [
+            {
+              "key_code": "escape"
+            }
+          ],
+          "to": [
+            {
+              "key_code": "left_shift",
+              "modifiers": [
+                "left_command",
+                "left_control",
+                "left_option"
+              ]
+            }
+          ]
+        }
+      ]
+    },
     {
       "description": "【 Application 】Hyper (Caps-Lock) + Backspace ＝ AppCleaner",
       "manipulators": [
@@ -26,7 +132,7 @@
       ]
     },
     {
-      "description": "【 Application 】Hyper (Caps-Lock) + A/tom C/hrome D/atabase E/vernote i/Term L/ine M/essenger P/ostman S/nippetsLab T/elegram",
+      "description": "【 Application 】Hyper (Caps-Lock) + A/pplications",
       "manipulators": [
         {
           "type": "basic",
@@ -43,14 +149,19 @@
           },
           "to": [
             {
-              "shell_command": "open -a Atom.app"
+              "shell_command": "open -a Launchpad.app"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "description": "【 Application 】Hyper (Caps-Lock) + G/oogle L/ine M/essenger T/elegram",
+      "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "c",
+            "key_code": "g",
             "modifiers": {
               "mandatory": [
                 "left_command",
@@ -63,63 +174,6 @@
           "to": [
             {
               "shell_command": "open -a Google\\ Chrome.app"
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "d",
-            "modifiers": {
-              "mandatory": [
-                "left_command",
-                "left_control",
-                "left_option",
-                "left_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a Dbeaver.app"
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "e",
-            "modifiers": {
-              "mandatory": [
-                "left_command",
-                "left_control",
-                "left_option",
-                "left_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a Evernote.app"
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "i",
-            "modifiers": {
-              "mandatory": [
-                "left_command",
-                "left_control",
-                "left_option",
-                "left_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a iTerm.app"
             }
           ]
         },
@@ -164,7 +218,7 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "p",
+            "key_code": "t",
             "modifiers": {
               "mandatory": [
                 "left_command",
@@ -176,7 +230,31 @@
           },
           "to": [
             {
-              "shell_command": "open -a Postman.app"
+              "shell_command": "open -a Telegram.app"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "【 Application 】Hyper (Caps-Lock) + N/ote S/nippets",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_option",
+                "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Evernote.app"
             }
           ]
         },
@@ -198,11 +276,16 @@
               "shell_command": "open -a SnippetsLab.app"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "description": "【 Application 】Hyper (Caps-Lock) + D/atabase E/ditor i/Term P/ostman",
+      "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "t",
+            "key_code": "d",
             "modifiers": {
               "mandatory": [
                 "left_command",
@@ -214,7 +297,64 @@
           },
           "to": [
             {
-              "shell_command": "open -a Telegram.app"
+              "shell_command": "open -a Dbeaver.app"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "e",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_option",
+                "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Atom.app"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "i",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_option",
+                "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a iTerm.app"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "p",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_control",
+                "left_option",
+                "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Postman.app"
             }
           ]
         }
