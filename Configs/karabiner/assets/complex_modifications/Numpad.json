@@ -2,7 +2,7 @@
   "title": "【 Numpad 】",
   "rules": [
     {
-      "description": "【 Numpad 】alt + zxcvsdfwer ＝ 0123456789",
+      "description": "【 Numpad 】alt + z|xcv|sdf|wer ＝ 0|123|456|789",
       "manipulators": [
         {
           "type": "basic",

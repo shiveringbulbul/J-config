@@ -74,6 +74,28 @@
       ]
     },
     {
+      "description": "【 Combination 】Alt + Tab ＝ Go to Last Application",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "tab",
+            "modifiers": [
+              "left_option"
+            ]
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "【 System 】Win + E ＝ Finder",
       "manipulators": [
         {
@@ -89,27 +111,6 @@
           "to": [
             {
               "shell_command": "open -a Finder.app"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "【 System 】Alt + L ＝ Launchpad",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "l",
-            "modifiers": {
-              "mandatory": [
-                "fn"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a Launchpad.app"
             }
           ]
         }
