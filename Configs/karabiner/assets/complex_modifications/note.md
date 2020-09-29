@@ -1,13 +1,43 @@
 關閉 Alt + f4
-鎖定 Win + L
-鎖定 Win + D
-Alt + [ Shift ] + Tab: Switch apps
-Ctrl + [ Shift ] + Tab
-Win + D
-Win + E Finder
-Win + M
 
-Option-Command-Esc：強制結束
-登出
-切換輸入法
-https://blog.ssdnodes.com/blog/cheatsheet-bash-shortcuts/
+空白被刪除
+
+
+工作管理員 活動監視器 系統工具
+
+
+
+tab = win + shift
+- + = fn
+
+
+{
+  "type": "basic",
+  "from": {
+    "key_code": "a"
+  },
+  "from": {
+    "key_code": "escape",
+    "modifiers": {
+      "mandatory": [
+        "command",
+        "option"
+      ]
+    }
+  }
+},
+{
+  "type": "basic",
+  "from": {
+    "key_code": "m",
+    "key_code": "o",
+    "modifiers": {
+      "mandatory": [
+        "caps_lock"
+      ]
+    }
+  },
+  "to":{
+    "shell_command": "open -a Activity\\ Monitor.app"
+  }
+}

@@ -7,17 +7,10 @@
   "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/shiveringbulbul/Jackalization/master/configurations/karabiner/assets/complex_modifications/Application.json",
   "rules": [
     {
-      "description": "【 Hyper 】Esc ＝ Caps-lock ( caps-mode on )",
+      "description": "【 Hyper 】Esc ＝ Caps-lock",
       "manipulators": [
         {
           "type": "basic",
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "caps_mode",
-              "value": 0
-            }
-          ],
           "from": {
             "key_code": "escape",
             "modifiers": {
@@ -30,54 +23,13 @@
             {
               "hold_down_milliseconds": 1000,
               "key_code": "caps_lock"
-            },
-            {
-              "set_variable": {
-                "name": "caps_mode",
-                "value": 1
-              }
             }
           ]
         }
       ]
     },
     {
-      "description": "【 Hyper 】Esc ＝ Caps-lock ( caps-mode off )",
-      "manipulators": [
-        {
-          "type": "basic",
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "caps_mode",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "escape",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "hold_down_milliseconds": 1000,
-              "key_code": "caps_lock"
-            },
-            {
-              "set_variable": {
-                "name": "caps_mode",
-                "value": 0
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "【 Hyper 】Caps-lock ＝ Hyper ( Ctrl-Win-Alt-Shift )",
+      "description": "【 Hyper 】Caps-lock ＝ Esc | Hyper + *",
       "manipulators": [
         {
           "type": "basic",
@@ -108,7 +60,7 @@
       ]
     },
     {
-      "description": "【 Application 】Hyper (Caps-Lock) + Backspace ＝ AppCleaner",
+      "description": "【 Application 】Hyper + Backspace ＝ AppCleaner",
       "manipulators": [
         {
           "type": "basic",
@@ -132,7 +84,7 @@
       ]
     },
     {
-      "description": "【 Application 】Hyper (Caps-Lock) + A/pplications",
+      "description": "【 Application 】Hyper + A/pplications",
       "manipulators": [
         {
           "type": "basic",
@@ -156,7 +108,7 @@
       ]
     },
     {
-      "description": "【 Application 】Hyper (Caps-Lock) + G/oogle L/ine M/essenger T/elegram",
+      "description": "【 Application 】Hyper + G/oogle L/ine M/essenger T/elegram",
       "manipulators": [
         {
           "type": "basic",
@@ -237,7 +189,7 @@
       ]
     },
     {
-      "description": "【 Application 】Hyper (Caps-Lock) + N/ote S/nippets",
+      "description": "【 Application 】Hyper + N/ote S/nippets",
       "manipulators": [
         {
           "type": "basic",
@@ -280,7 +232,7 @@
       ]
     },
     {
-      "description": "【 Application 】Hyper (Caps-Lock) + D/atabase E/ditor i/Term P/ostman",
+      "description": "【 Application 】Hyper + D/atabase E/ditor i/Term P/ostman",
       "manipulators": [
         {
           "type": "basic",
