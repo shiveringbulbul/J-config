@@ -1,0 +1,72 @@
+{
+  "description": "【 Addition-Win 】Win + Alt + C ＝ 超注音輸入法",
+  "manipulators": [
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "input_source_unless",
+          "input_sources": [
+            {
+              "input_mode_id": "tw.superime.inputmethod.zhuyin",
+              "input_source_id": "tw.superime.inputmethod.ChaozhuyinMacOS.zhuyin",
+              "language": "zh-Hant"
+            }
+          ]
+        }
+      ],
+      "from": {
+        "key_code": "c",
+        "modifiers": {
+          "mandatory": [
+            "left_control",
+            "left_option"
+          ]
+        }
+      },
+      "to": [
+        {
+          "select_input_source": {
+            "input_mode_id": "tw.superime.inputmethod.zhuyin",
+            "input_source_id": "tw.superime.inputmethod.ChaozhuyinMacOS.zhuyin",
+            "language": "zh-Hant"
+          }
+        }
+      ]
+    }
+  ]
+},
+{
+  "description": "【 Addition-Win 】Win + Alt + Spacebar ＝ 英文輸入法",
+  "manipulators": [
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "input_source_unless",
+          "input_sources": [
+            {
+              "language": "en"
+            }
+          ]
+        }
+      ],
+      "from": {
+        "key_code": "spacebar",
+        "modifiers": {
+          "mandatory": [
+            "left_control",
+            "left_option"
+          ]
+        }
+      },
+      "to": [
+        {
+          "select_input_source": {
+            "language": "en"
+          }
+        }
+      ]
+    }
+  ]
+},
