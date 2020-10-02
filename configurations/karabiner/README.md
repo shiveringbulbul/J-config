@@ -103,7 +103,7 @@ open ~/.config/karabiner/assets/complex_modifications
     - name: close_bracket
       label: close_bracket ]
     - name: backslash
-      label: backslash (\)
+      label: backslash (\\)
     - name: non_us_pound
     - name: semicolon
       label: semicolon (;)

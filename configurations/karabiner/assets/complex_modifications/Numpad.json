@@ -2,7 +2,7 @@
   "title": "【 Numpad 】",
   "rules": [
     {
-      "description": "【 Numpad 】alt + z|xcv|sdf|wer ＝ 0|123|456|789",
+      "description": "【 Numpad 】Left-Alt + zxcvsdfwer ＝ 0123456789",
       "manipulators": [
         {
           "type": "basic",
@@ -10,7 +10,7 @@
             "key_code": "z",
             "modifiers": {
               "mandatory": [
-                "option"
+                "left_option"
               ]
             }
           },
@@ -26,7 +26,7 @@
             "key_code": "x",
             "modifiers": {
               "mandatory": [
-                "option"
+                "left_option"
               ]
             }
           },
@@ -42,7 +42,7 @@
             "key_code": "c",
             "modifiers": {
               "mandatory": [
-                "option"
+                "left_option"
               ]
             }
           },
@@ -58,7 +58,7 @@
             "key_code": "v",
             "modifiers": {
               "mandatory": [
-                "option"
+                "left_option"
               ]
             }
           },
@@ -74,7 +74,7 @@
             "key_code": "s",
             "modifiers": {
               "mandatory": [
-                "option"
+                "left_option"
               ]
             }
           },
@@ -90,7 +90,7 @@
             "key_code": "d",
             "modifiers": {
               "mandatory": [
-                "option"
+                "left_option"
               ]
             }
           },
@@ -106,7 +106,7 @@
             "key_code": "f",
             "modifiers": {
               "mandatory": [
-                "option"
+                "left_option"
               ]
             }
           },
@@ -122,7 +122,7 @@
             "key_code": "w",
             "modifiers": {
               "mandatory": [
-                "option"
+                "left_option"
               ]
             }
           },
@@ -138,7 +138,7 @@
             "key_code": "e",
             "modifiers": {
               "mandatory": [
-                "option"
+                "left_option"
               ]
             }
           },
@@ -154,7 +154,7 @@
             "key_code": "r",
             "modifiers": {
               "mandatory": [
-                "option"
+                "left_option"
               ]
             }
           },
@@ -167,47 +167,31 @@
       ]
     },
     {
-      "description": "【 Numpad 】alt + 345t gb ＝ /*-+ enter",
+      "description": "【 Numpad 】Left-Alt + qatgb ＝ +−×÷↵",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "3",
+            "key_code": "q",
             "modifiers": {
               "mandatory": [
-                "option"
+                "left_option"
               ]
             }
           },
           "to": [
             {
-              "key_code": "keypad_slash"
+              "key_code": "keypad_plus"
             }
           ]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "4",
+            "key_code": "a",
             "modifiers": {
               "mandatory": [
-                "option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "keypad_asterisk"
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "5",
-            "modifiers": {
-              "mandatory": [
-                "option"
+                "left_option"
               ]
             }
           },
@@ -223,7 +207,225 @@
             "key_code": "t",
             "modifiers": {
               "mandatory": [
-                "option"
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_asterisk"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "g",
+            "modifiers": {
+              "mandatory": [
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_slash"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "b",
+            "modifiers": {
+              "mandatory": [
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_enter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "【 Numpad 】Right-Alt + m,./kl;iop ＝ 0123456789",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_0"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "comma",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_1"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_2"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "slash",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_3"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_4"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_5"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_6"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "i",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_7"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_8"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "p",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "【 Numpad 】Left-Alt + uj[' ＝ +−×÷↵",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
               ]
             }
           },
@@ -236,32 +438,48 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "g",
+            "key_code": "j",
             "modifiers": {
               "mandatory": [
-                "option"
+                "right_option"
               ]
             }
           },
           "to": [
             {
-              "key_code": "keypad_enter"
+              "key_code": "keypad_hyphen"
             }
           ]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "b",
+            "key_code": "open_bracket",
             "modifiers": {
               "mandatory": [
-                "option"
+                "right_option"
               ]
             }
           },
           "to": [
             {
-              "key_code": "keypad_enter"
+              "key_code": "keypad_asterisk"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "quote",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_slash"
             }
           ]
         }

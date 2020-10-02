@@ -1,10 +1,10 @@
 {
-  "title": "【 Addition 】",
+  "title": "【 ㊥ / ⓔ 】",
   "author": "JackaL(shiveringbulbul@hotmail.com)",
   "homepage": "https://github.com/shiveringbulbul/Jackalization",
-  "hostpage": "https://pqrs.org/osx/karabiner/complex_modifications/",
-  "manual": "https://github.com/shiveringbulbul/Jackalization/tree/master/configurations/karabiner/assets/complex_modifications/",
-  "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/shiveringbulbul/Jackalization/master/configurations/karabiner/assets/complex_modifications/Application.json",
+  "hostpage": "https://pqrs.org/osx/karabiner/backups/",
+  "manual": "https://github.com/shiveringbulbul/Jackalization/tree/master/configurations/karabiner/assets/backups/",
+  "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/shiveringbulbul/Jackalization/master/configurations/karabiner/assets/backups/input_method.json",
   "rules": [
     {
       "description": "【 ㊥ 】超注音輸入法: Win + Alt + C",
