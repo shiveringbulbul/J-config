@@ -17,6 +17,30 @@ Win U utilities
 Win L Lock
 
 
+{
+  "description": "【 Application 】Hyper + A/pplications",
+  "manipulators": [
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "a",
+        "modifiers": {
+          "mandatory": [
+            "left_command",
+            "left_control",
+            "left_option",
+            "left_shift"
+          ]
+        }
+      },
+      "to": [
+        {
+          "shell_command": "open -a Launchpad.app"
+        }
+      ]
+    }
+  ]
+},
 
 
 

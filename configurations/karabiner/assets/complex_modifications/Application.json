@@ -7,7 +7,7 @@
   "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/shiveringbulbul/Jackalization/master/configurations/karabiner/assets/complex_modifications/Application.json",
   "rules": [
     {
-      "description": "【 Hyper 】Esc: Caps-lock",
+      "description": "【 Hyper 】Esc: CapsLock",
       "manipulators": [
         {
           "type": "basic",
@@ -29,7 +29,7 @@
       ]
     },
     {
-      "description": "【 Hyper 】Caps-lock: Esc|Hyper",
+      "description": "【 Hyper 】CapsLock: Esc|Hyper",
       "manipulators": [
         {
           "type": "basic",
@@ -79,30 +79,6 @@
           "to": [
             {
               "shell_command": "open -a AppCleaner.app"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "【 Application 】Hyper + A/pplications",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "a",
-            "modifiers": {
-              "mandatory": [
-                "left_command",
-                "left_control",
-                "left_option",
-                "left_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a Launchpad.app"
             }
           ]
         }
