@@ -1,72 +1,81 @@
-Authority Website:
-  https://karabiner-elements.pqrs.org/
+## Authority Website:
+[karabiner-elements](https://karabiner-elements.pqrs.org/)
+```bash
+brew install karabiner-elements
+```
 
-App Command:
-  1. brew install karabiner-elements
-  2. kara init
-  3. kara backup
-  4. kara restore
 
-Test Configuration:
-  http://en.key-test.ru/
+## Test Configuration:
+[http://en.key-test.ru/](http://en.key-test.ru/)
 
-Default Configuration Path:
-  ~/.config/karabiner/assets/complex_modifications
 
-Configuration Builder:
-  https://genesy.github.io/karabiner-complex-rules-generator/
+## Default Configuration Path:
+```bash
+open ~/.config/karabiner/assets/complex_modifications
+```
 
-Configuration Examples:
-  - Normal Change <A-Key> to <B-Key>
-    {
-      "from": {
-        "key_code": "<A-Key>"
-      },
-      "to": {
-        "key_code": "<B-Key>"
-      }
+
+## Configuration Builder:
+[karabiner-complex-rules-generator](https://genesy.github.io/karabiner-complex-rules-generator/)
+
+
+## Configuration Examples:
+```bash
+# Normal Change <A-Key> to <B-Key>
+{
+  "from": {
+    "key_code": "<A-Key>"
+  },
+  "to": {
+    "key_code": "<B-Key>"
+  }
+}
+# Normal Change <A-Key> to <Multiple-Prefix> + <B-Key>
+{
+  "from": {
+    "key_code": "<A-Key>"
+  },
+  "to": {
+    "key_code": "<B-Key>",
+    "modifiers": [
+      "command",
+      "control",
+      "option"
+    ]
+  }
+}
+# Change <A-Key> to <B-Key> If Press Alone. Else, trig <C-Key>
+{
+  "type": "basic",
+  "from": {
+    "key_code": "<A-Key>",
+    "modifiers": {
+      "optional": [
+        "any"
+      ]
     }
-  - Normal Change <A-Key> to <Multiple-Prefix> + <B-Key>
-    {
-      "from": {
-        "key_code": "<A-Key>"
-      },
-      "to": {
-        "key_code": "<B-Key>",
-        "modifiers": [
-          "command",
-          "control",
-          "option"
-        ]
-      }
-    }
-  - Change <A-Key> to <B-Key> If Press Alone. Else, trig <C-Key>
-    {
-      "type": "basic",
-      "from": {
-        "key_code": "<A-Key>",
-        "modifiers": {
-          "optional": [
-            "any"
-          ]
-        }
-      },
-      "to_if_alone": {
-        "key_code": "<B-Key>"
-      },
-      "to": {
-        "key_code": "<C-Key>"
-      }
-    },
-  - Disable <A-Key>
-    {
-      "type": "basic",
-      "from": {
-        "key_code": "<A-Key>"
-      }
-    }
+  },
+  "to_if_alone": {
+    "key_code": "<B-Key>"
+  },
+  "to": {
+    "key_code": "<C-Key>"
+  }
+}
+# Disable <A-Key>
+{
+  "type": "basic",
+  "from": {
+    "key_code": "<A-Key>"
+  }
+  "to": {
+    "key_code": "vk_none"
+  }
+}
+```
 
-Configuration Key Codes Reference:
+
+## Configuration Key Codes Reference:
   - category: Modifier keys
     - name: caps_lock
     - name: left_control
@@ -393,4 +402,4 @@ Configuration Key Codes Reference:
     - name: volume_down
       label: volume_down (equal tovolume_decrement)
     - name: volume_up
-      label: volume_up (equal tovolume_increment`)
+      label: volume_up (equal tovolume_increment)

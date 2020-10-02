@@ -1,14 +1,23 @@
 關閉 Alt + f4
 
-空白被刪除
+-= = fn
 
+use f19 as mandatory
 
 工作管理員 活動監視器 系統工具
 
 
 
-tab = win + shift
-- + = fn
+win applications
+Win A 通知
+Win .   emoji
+Win m Hide
+Win D desktop
+Win U utilities
+Win L Lock
+
+
+
 
 
 {
