@@ -26,6 +26,7 @@
           ],
           "to": [
             {
+              "lazy": true,
               "key_code": "left_shift",
               "modifiers": [
                 "left_control"
@@ -55,6 +56,7 @@
           ],
           "to": [
             {
+              "lazy": true,
               "key_code": "left_option",
               "modifiers": [
                 "left_shift"
@@ -81,6 +83,7 @@
             "key_code": "spacebar"
           },
           "to": {
+            "lazy": true,
             "key_code": "left_control"
           }
         }
@@ -103,6 +106,7 @@
             "key_code": "delete_forward"
           },
           "to": {
+            "lazy": true,
             "key_code": "right_option"
           }
         }
@@ -125,6 +129,7 @@
             "key_code": "f18"
           },
           "to": {
+            "lazy": true,
             "key_code": "right_command"
           }
         }
@@ -147,6 +152,7 @@
             "key_code": "up_arrow"
           },
           "to": {
+            "lazy": true,
             "key_code": "right_shift"
           }
         },
@@ -166,17 +172,17 @@
       "manipulators": [
         {
           "type": "basic",
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 1000,
-            "basic.to_if_held_down_threshold_milliseconds": 1000
-          },
           "from": {
-            "key_code": "equal_sign"
+            "simultaneous": [
+              {
+                "key_code": "period"
+              },
+              {
+                "key_code": "slash"
+              }
+            ]
           },
-          "to_if_alone": {
-            "key_code": "equal_sign"
-          },
-          "to_if_held_down": {
+          "to": {
             "key_code": "fn"
           }
         }
