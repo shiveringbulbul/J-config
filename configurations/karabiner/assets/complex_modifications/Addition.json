@@ -138,21 +138,22 @@
       ]
     },
     {
-      "description": "【 Addition 】=: =|Fn",
+      "description": "【 Addition 】0: 0|Fn",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "simultaneous": [
-              {
-                "key_code": "hyphen"
-              },
-              {
-                "key_code": "equal_sign"
-              }
-            ]
+            "key_code": "0",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
-          "to": {
+          "to_if_alone": {
+            "key_code": "0"
+          },
+          "to_if_held_down": {
             "key_code": "fn"
           }
         }
