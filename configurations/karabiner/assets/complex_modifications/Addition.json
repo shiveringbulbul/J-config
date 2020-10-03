@@ -7,7 +7,7 @@
   "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/shiveringbulbul/Jackalization/master/configurations/karabiner/assets/complex_modifications/Addition.json",
   "rules": [
     {
-      "description": "【 Win-Hyper 】Tab: Tab| Win + Shift",
+      "description": "【 Typer 】Tab: Tab| Win + Shift",
       "manipulators": [
         {
           "type": "basic",
