@@ -50,8 +50,6 @@ brew cask install mounty
 # +-----+
 # | 介面 |
 # +-----+
-- 微軟化視窗切換
-brew cask install alt-tab
 - 視窗分割控制
 brew cask install spectacle
 - 鍵盤快捷鍵修改

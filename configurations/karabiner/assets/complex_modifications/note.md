@@ -16,55 +16,45 @@ Win L Lock
 
 
 
-{
-  "description": "【 Addition 】=: =|Fn",
-  "manipulators": [
-    {
-      "type": "basic",
-      "from": {
-        "simultaneous": [
-          {
-            "key_code": "hyphen"
-          },
-          {
-            "key_code": "equal_sign"
-          }
-        ]
-      },
-      "to": {
-        "key_code": "fn"
-      }
-    }
-  ]
-}
 
 {
   "type": "basic",
   "from": {
-    "key_code": "a"
-  },
-  "from": {
-    "key_code": "escape",
+    "key_code": "tab",
     "modifiers": {
       "mandatory": [
-        "command",
-        "option"
+        "command"
       ]
     }
-  }
+  },
+  "to": [
+    {
+      "key_code": "vk_none"
+    }
+  ]
 },
 {
   "type": "basic",
   "from": {
-    "key_code": "m",
-    "key_code": "o",
+    "key_code": "tab",
     "modifiers": {
       "mandatory": [
-        "caps_lock"
+        "left_option"
       ]
     }
   },
-  "to":{
-    "shell_command": "open -a Activity\\ Monitor.app"
-  }
-}
+  "to": [
+    {
+      "key_code": "tab",
+      "modifiers": [
+        "left_command"
+      ]
+    }
+  ]
+},
+
+
+
+
+"shell_command": "open -a Activity\\ Monitor.app"
+"shell_command": "/System/Library/Input\\ Methods/CharacterPalette.app"
