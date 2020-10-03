@@ -19,7 +19,7 @@ dos2unix
 pandoc
 gpg
 bash-completion zsh-completion nmap tree curl tmux
-influxdb grafana
+
 gist
 omniplan
 
@@ -99,11 +99,11 @@ brew cask install dbeaver-community
 # for MySQL
 brew cask install sequel-pro
 # for ER Modeling
+  # name: lanyu
+  # key: 9bbd2251619a1b92966d0d48950df85f03520
 brew cask install dbschema
-# name: lanyu
-# key: 9bbd2251619a1b92966d0d48950df85f03520
-
-
+# for influxDB
+brew cask install grafana
 
 
 [x] iTerm 2
