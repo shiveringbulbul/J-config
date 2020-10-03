@@ -1,4 +1,4 @@
-## Authority Website:
+## Website:
 [karabiner-elements](https://karabiner-elements.pqrs.org/)
 ```bash
 brew install karabiner-elements
@@ -16,7 +16,8 @@ open ~/.config/karabiner/assets/complex_modifications
 
 
 ## Configuration Builder:
-[karabiner-complex-rules-generator](https://genesy.github.io/karabiner-complex-rules-generator/)
+- [Documentation](https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/)
+- [Complex-Rules Generator](https://genesy.github.io/karabiner-complex-rules-generator/)
 
 
 ## Configuration Key Codes Reference:

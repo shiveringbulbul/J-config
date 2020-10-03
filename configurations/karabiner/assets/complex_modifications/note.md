@@ -16,7 +16,27 @@ Win L Lock
 
 
 
-
+{
+  "description": "【 Addition 】=: =|Fn",
+  "manipulators": [
+    {
+      "type": "basic",
+      "from": {
+        "simultaneous": [
+          {
+            "key_code": "hyphen"
+          },
+          {
+            "key_code": "equal_sign"
+          }
+        ]
+      },
+      "to": {
+        "key_code": "fn"
+      }
+    }
+  ]
+}
 
 {
   "type": "basic",
