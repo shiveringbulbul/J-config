@@ -21,7 +21,56 @@ g finder
 
 
 
-
+{
+  "type": "basic",
+  "conditions": [
+    {
+      "type": "variable_if",
+      "name": "fn-mode",
+      "value": 1
+    }
+  ],
+  "from": {
+      "key_code": "0"
+  },
+  "to": [
+    {
+      "key_code": "fn"
+    }
+  ]
+},
+{
+  "type": "basic",
+  "from": {
+    "key_code": "0"
+  },
+  "to": [
+    {
+      "set_variable": {
+        "name": "fn-mode",
+        "value": 1
+      }
+    }
+  ],
+  "to_delayed_action": {
+    "to_if_invoked": [
+      {
+        "set_variable": {
+          "name": "fn-mode",
+          "value": 0
+        }
+      }
+    ],
+    "to_if_canceled": [
+      {
+        "set_variable": {
+          "name": "fn-mode",
+          "value": 0
+        }
+      }
+    ]
+  }
+}
 
 {
   "type": "basic",

@@ -142,10 +142,10 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "0"
+            "key_code": "equal_sign"
           },
           "to_if_alone": {
-            "key_code": "0"
+            "key_code": "equal_sign"
           },
           "to_if_held_down": {
             "key_code": "fn"
