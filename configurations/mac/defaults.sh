@@ -1,11 +1,16 @@
+# +--------------+
+# | Login Screen |
+# +--------------+
+sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "千里之外 • 掐指定音"
+
 # +--------+
 # | Finder |
 # +--------+
 # 啟用文件預覽 + 文字選取設定
 defaults write com.apple.finder QLEnableTextSelection -bool TRUE
 killall Finder
-# 停用文件預覽 + 文字選取設定
-defaults delete com.apple.finder QLEnableTextSelection
+# 顯示隱藏檔案
+defaults write com.apple.finder AppleShowAllFiles -bool TRUE
 killall Finder
 
 # +-------+
