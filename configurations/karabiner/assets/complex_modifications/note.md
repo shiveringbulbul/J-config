@@ -15,6 +15,12 @@ Win U utilities
 Win L Lock
 
 
+受影響的termail
+lafm
+g finder
+
+
+
 
 
 {
