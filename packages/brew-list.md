@@ -67,6 +67,7 @@ brew cask install typora
 brew cask install evernote
 brew cask install opera
 brew cask install google-chrome
+brew cask install google-backup-and-sync
 brew cask install teamviewer
 
 
