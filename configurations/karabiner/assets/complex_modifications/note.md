@@ -7,10 +7,7 @@ disable ctrl shift q
 
 
 
-1. giignore
-2. gitattribute
-3. docker ignore
-4. git2dockerignore sh script
+
 5. markdown title
 6. folder structer redesign
 

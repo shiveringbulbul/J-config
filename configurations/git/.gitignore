@@ -1,32 +1,41 @@
+# ╔══════════╗
+# ╠  System  ╣
+# ╚══════════╝
 # Image Cache File in Windows OS
 Thumbs.db
-
 # Desktop Services Store in Mac OS
 .DS_Store
-
 # Google Cloud Sync
 .tmp.drivedownload/
 *.driveupload
 
-
+# ╔═══════════╗
+# ╠  Develop  ╣
+# ╚═══════════╝
+# Visual Studio Settings
+.vscode/
+# Coding Style
+.editorconfig
+.flake8
+.isort.cfg
+.pycodestyle
+.pylintrc
+# Logger
+logs/*
 
 # ╔══════════╗
 # ╠  Python  ╣
 # ╚══════════╝
-# Visual Studio Settings
-.vscode/
-
-# Python Byte-compiled
+# python byte-compiled
 __pycache__/
 *.py[cod]
+# python package management
+poetry.lock
+pyproject.toml
 
+# ╔══════════╗
+# ╠  Django  ╣
+# ╚══════════╝
 # Media, Static
 media/*
 static/*
-
-# Backup, Log
-zen.Backup/*
-zen.Log/*
-
-# Pivates
-zen/*

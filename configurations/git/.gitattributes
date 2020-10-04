@@ -1,19 +1,20 @@
-
-# doc or demo file
-documentation/* linguist-vendored
+# ╔═══════════╗
+# ╠  Default  ╣
+# ╚═══════════╝
+# system or demo files
 *.doc* linguist-vendored
 *.xls* linguist-vendored
 *.ppt* linguist-vendored
 *.sql linguist-vendored
+*.webp linguist-vendored
+*.png linguist-vendored
+*.jpg linguist-vendored
 *.txt linguist-vendored
 *.log linguist-vendored
-
-# Documentation
-zen.documentation/*
-# Docker Volume
-zen.volumes/*
-# backup folders
-zen.backup/*
+# documentation, develop files
+.docker/* linguist-vendored
+documentation/* linguist-vendored
+logs/* linguist-vendored
 
 # ╔══════════╗
 # ╠  Python  ╣
@@ -21,4 +22,5 @@ zen.backup/*
 # front end file
 apps/templates/* linguist-vendored
 templates/* linguist-vendored
+media/* linguist-vendored
 static/* linguist-vendored
