@@ -5,8 +5,15 @@ disable ctrl shift q
 
 工作管理員 活動監視器 系統工具
 
-markdown title
-git log gitignore docker
+
+
+1. giignore
+2. gitattribute
+3. docker ignore
+4. git2dockerignore sh script
+5. markdown title
+6. folder structer redesign
+
 
 
 
