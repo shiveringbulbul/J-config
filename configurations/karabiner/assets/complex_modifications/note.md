@@ -8,8 +8,9 @@ disable ctrl shift q
 
 
 
-5. markdown title
-6. folder structer redesign
+1. 我的readme專案 markdown title
+2. 我的word文件 folder structer redesign
+3. 整理我的專案版本 硬碟版本
 
 
 
@@ -24,8 +25,13 @@ Win L Lock
 
 
 受影響的termail
-lafm
-g finder
+d 全部縮小回到桌面
+l 鎖定
+a 通知
+f spotlight
+m 縮小
+g finder 中的GOTO
+u 系統工具
 
 
 
