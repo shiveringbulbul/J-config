@@ -37,33 +37,6 @@
       ]
     },
     {
-      "description": "【 Addition 】Spacebar: Spacebar|Win",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "spacebar",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to_if_held_down": [
-            {
-              "key_code": "left_control",
-              "halt": true
-            }
-          ],
-          "to_after_key_up": [
-            {
-              "key_code": "spacebar"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "description": "【 Addition 】Right-Command: Del|Alt",
       "manipulators": [
         {

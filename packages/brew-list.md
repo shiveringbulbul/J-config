@@ -1,17 +1,20 @@
 [x] Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)”
 # cask 管理器 ->  軟體會顯示在啟動器中
 brew install caskroom/cask/brew-cask
 
 brew pin python  # 鎖定 Python 版本
 brew update
+
+
+brew update will update the list of available formulae, and brew upgrade will upgrade any outdated packages
+
+
+
+
 brew cask upgrade
 brew [cask] list
 
-brew info **套件**
-brew search **套件**
-brew cask install **套件**
-brew cleanup —-prune 0
+
 
 brew install wget git git-gui
 htop wget tldr
@@ -34,14 +37,28 @@ brew cask install tableplus
 # ╔════════════╗
 # ╠  Homebrew  ╣
 # ╚════════════╝
+- 安裝 Homebrew  
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)”
+- 安裝 cask  -  for GUI applications  
+brew install caskroom/cask/brew-cask
 
 
+<!-- ╠═══╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═════╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═══╣ -->
+# Usage
+
+brew info **套件**
+brew search **套件**
+brew cask install **套件**
+brew cleanup —-prune 0
+- 更新標記可更新的 app  
+`brew update`
+- 更新所有非最新的 app  
+`brew upgrade`
 
 
+<!-- ╠═══╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═════╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═══╣ -->
+# 系統
 
-# +-----+
-# | 系統 |
-# +-----+
 - 程式監控  
 `brew cask install sloth`  
 - 麥克風與攝影機安全監控  
@@ -56,17 +73,18 @@ brew cask install tableplus
 `brew cask install mounty`  
 
 
-# +-----+
-# | 介面 |
-# +-----+
+<!-- ╠═══╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═════╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═══╣ -->
+# 介面
+
 - 視窗分割控制  
 `brew cask install spectacle`
 - 鍵盤快捷鍵修改  
 `brew cask install karabiner-elements`
 
 
-
+<!-- ╠═══╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═════╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═══╣ -->
 #### 辦公
+
 - 文字編輯  
 `brew cask install textmate`  
 - 文書處理  
@@ -80,6 +98,7 @@ brew cask install tableplus
 `brew cask install google-chrome`  
 
 
+<!-- ╠═══╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═════╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═══╣ -->
 #### 開發
 
 - 文字編輯  
@@ -135,10 +154,6 @@ brew install kite
 # 設定 MySQL
 brew install mysql
 vim /usr/local/bin/mysql_config
-'''
-libs="-L$pkglibdir"
-libs="$libs -lmysqlclient -lssl -lcrypto”
-'''
 
 # 設定 openssl
 brew install openssl
