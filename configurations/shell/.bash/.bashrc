@@ -4,7 +4,7 @@
 alias cd2="cd ../.."
 alias cd3="cd ../../.."
 alias cd4="cd ../../../.."
-alias delhis="history -c && exec $SHELL -l"
+alias delhis="cat /dev/null > ~/.bash_history && history -c && exec $SHELL -l"
 alias shut="sudo shutdown -h now"
 alias rebo="sudo reboot"
 alias hosts="sudo vim /etc/hosts"
