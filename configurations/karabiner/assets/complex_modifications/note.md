@@ -16,22 +16,17 @@ disable ctrl shift q
 
 
 
-win applications
-Win A 通知
-Win m Hide
-Win D desktop
-Win U utilities
-Win L Lock
+win applications   -
 
 
 受影響的termail
 d 全部縮小回到桌面
-l 鎖定
-a 通知
-f spotlight
+f spotlight         -
 m 縮小
-g finder 中的GOTO
-u 系統工具
+l 鎖定
+a 通知               -
+g finder 中的GOTO    -
+u 系統工具            -
 
 
 

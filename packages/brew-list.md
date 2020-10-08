@@ -61,10 +61,12 @@ brew cleanup —-prune 0
 
 - 程式監控  
 `brew cask install sloth`  
-- 麥克風與攝影機安全監控  
-`brew cask install oversight`  
 - 完全解除安裝  
 `brew cask install appcleaner`  
+- 麥克風、攝影機，安全監控  
+`brew cask install oversight`  
+- 隱藏選單列  
+`brew cask install hiddenbar`  
 - 截圖  
 `brew cask install snipaste`  
 - 壓縮  
