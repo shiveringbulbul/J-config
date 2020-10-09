@@ -13,7 +13,7 @@ disable ctrl shift q
 3. 整理我的專案版本 硬碟版本
 
 
-
+open -a Preview.app /Users/jackal/Desktop/Coding/Jackalization/configurations/karabiner/src/up.png
 
 
 win applications   -
