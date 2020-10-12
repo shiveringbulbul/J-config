@@ -69,8 +69,27 @@
       ]
     },
     {
-      "description": "【 Application 】Hyper + Backspace ＝ AppCleaner",
+      "description": "【 Application 】Hyper + ? ＝ Application",
       "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "z",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_option",
+                "right_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Safari.app $HOME/.config/karabiner/manual/application.html"
+            }
+          ]
+        },
         {
           "type": "basic",
           "from": {
@@ -89,12 +108,102 @@
               "shell_command": "open -a AppCleaner.app"
             }
           ]
-        }
-      ]
-    },
-    {
-      "description": "【 Application 】Hyper + G/oogle L/ine M/essenger T/elegram",
-      "manipulators": [
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "e",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_option",
+                "right_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Finder.app"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "open_bracket",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_option",
+                "right_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Telegram.app"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "close_bracket",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_option",
+                "right_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Line.app"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_option",
+                "right_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Messenger.app"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_option",
+                "right_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "launchpad"
+            }
+          ]
+        },
         {
           "type": "basic",
           "from": {
@@ -117,68 +226,6 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "l",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_option",
-                "right_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a Line.app"
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "m",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_option",
-                "right_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a Messenger.app"
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "t",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_option",
-                "right_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a Telegram.app"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "【 Application 】Hyper + N/ote S/nippets",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
             "key_code": "n",
             "modifiers": {
               "mandatory": [
@@ -198,69 +245,7 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "s",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_option",
-                "right_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a SnippetsLab.app"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "【 Application 】Hyper + D/atabase E/ditor i/Term P/ostman",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "d",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_option",
-                "right_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a Dbeaver.app"
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "e",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_option",
-                "right_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a Atom.app"
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "i",
+            "key_code": "period",
             "modifiers": {
               "mandatory": [
                 "right_command",
@@ -279,7 +264,7 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "p",
+            "key_code": "slash",
             "modifiers": {
               "mandatory": [
                 "right_command",
@@ -291,7 +276,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a Postman.app"
+              "shell_command": "open -a Atom.app"
             }
           ]
         }
