@@ -111,6 +111,8 @@ brew cleanup —-prune 0
 - 版本控制輔助  
 `brew cask install fork`  
 `brew cask install https://raw.githubusercontent.com/Homebrew/homebrew-cask/6a96e5ea44803e52a43c0c89242390f75d1581ab/Casks/kdiff3.rb  # kdiff3`  
+- 主機管理  
+`brew cask install termius`  
 - 容器  
 `brew cask install docker`  
 - API 調適  
