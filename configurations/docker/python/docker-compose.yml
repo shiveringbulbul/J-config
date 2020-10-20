@@ -1,0 +1,26 @@
+version: "3.8"
+
+
+networks:
+  pyproj:
+    name: pyproj
+
+
+services:
+
+  pyproj:
+    container_name: pyproj
+    image: pyproj
+    build: .
+    working_dir: /home/pyproj
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DEBUG=$DEBUG
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/home/pyproj
+    networks:
+      - pyproj
+    restart: always
+    command: sh entrypoint.sh

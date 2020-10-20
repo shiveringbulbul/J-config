@@ -1,0 +1,42 @@
+version: "3.8"
+
+
+networks:
+  db:
+    name: db
+
+
+services:
+
+  memcached:
+    image: memcached:1.6.7-alpine
+    container_name: memcached
+    environment:
+      - MEMCACHED_CACHE_SIZE=128
+      - MEMCACHED_MAX_CONNECTIONS=4096
+    networks:
+      - db
+
+  redis:
+    image: redis:6-alpine
+    container_name: redis
+    networks:
+      - db
+
+  postgres:
+    image: postgres:12-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_DB: test_db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: p@ssw0rd
+    networks:
+      - db
+
+  influxdb:
+    image: influxdb:1.7-alpine
+    container_name: influxdb
+    environment:
+      INFLUXDB_DB: test_db
+    networks:
+      - db

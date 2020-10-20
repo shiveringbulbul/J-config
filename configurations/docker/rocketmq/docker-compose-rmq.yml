@@ -1,0 +1,41 @@
+version: "3.8"
+
+networks:
+  mq:
+    name: mq
+
+
+services:
+
+  mq-namesrv:
+    image: foxiswho/rocketmq:server
+    container_name: mq-namesrv
+    networks:
+      - mq
+
+  mq-broker:
+    container_name: mq-broker
+    image: foxiswho/rocketmq:broker
+    environment:
+        NAMESRV_ADDR: "mq-namesrv:9876"
+        JAVA_OPTS: " -Duser.home=/opt"
+        JAVA_OPT_EXT: "-server -Xms128m -Xmx128m -Xmn128m"
+    volumes:
+      - ./broker.conf:/etc/rocketmq/broker.conf
+    depends_on:
+      - mq-namesrv
+    networks:
+      - mq
+    command: mqbroker -c /etc/rocketmq/broker.conf
+
+  mq-console:
+    container_name: mq-console
+    image: styletang/rocketmq-console-ng
+    environment:
+        JAVA_OPTS: "-Drocketmq.namesrv.addr=rmq-namesrv:9876 -Dcom.rocketmq.sendMessageWithVIPChannel=false"
+    ports:
+      - 8080:8080
+    depends_on:
+      - mq-namesrv
+    networks:
+      - mq

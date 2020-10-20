@@ -1,0 +1,26 @@
+version: "3.8"
+
+
+networks:
+  crawler:
+    name: crawler
+
+
+services:
+
+  crawler:
+    container_name: wetrade-producer
+    image: wetrade-producer
+    build: .
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DEBUG=$DEBUG
+    volumes:
+      - .:/home/crawler
+    working_dir: /home/crawler
+    networks:
+      - crawler
+    stdin_open: true
+    tty: true
+    restart: always
+    command: sh entrypoint.sh
