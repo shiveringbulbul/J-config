@@ -65,7 +65,5 @@ alias rhttpd='sudo systemctl restart httpd'
 # ---------------------
 # ——  Quick Start  ----
 # ---------------------
-alias pgon="brew services start postgresql"
-alias pgoff="brew services stop postgresql"
+alias comp="docker-compose"
 alias 2**專案**="source /Users/jackal/Desktop/**專案**"
-alias **專案**="source /Users/jackal/Desktop/envs/**專案**/bin/activate"
