@@ -1,8 +1,15 @@
 [MASTER]
 jobs=2
 ignore=migrations
-# init-hook="import sys; sys.path = [r'C:\Users\jackal\Desktop\<project>', r'C:\Users\jackal\Desktop\envs\<project>\Lib\site-packages'] + sys.path"
-init-hook="import sys; sys.path = [r'/Users/jackal/Desktop/<project>',r'/Users/jackal/Desktop/envs/<project-hash>/lib/python3.7/site-packages'] + sys.path"
+init-hook="
+          import os, sys
+          home = os.path.expanduser('~')
+          target = os.path.join(home, 'Desktop', 'odiall')  # <- EDIT THIS LINE
+          envs_path = os.path.join(home, 'Desktop', 'envs')
+          envs = (folder for folder in os.listdir(envs_path) if os.path.isdir(folder))
+          paths = [os.path.join(home, 'Desktop', 'envs', env, 'lib', 'python3.7', 'site-packages') for env in envs]
+          sys.path = [target] + paths + sys.path
+          "
 # load-plugins=pylint_django
 persistent=yes
 rcfile=
