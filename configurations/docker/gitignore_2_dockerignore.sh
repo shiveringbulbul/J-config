@@ -6,7 +6,7 @@ cd $DIR && cd ..
 
 # writing
 cat .gitignore > .dockerignore
-cat $DIR/gitignore_2_dockerignore.txt >> .dockerignore
+cat $DIR/.dockerignore-suffix.src >> .dockerignore
 
 # finished
 echo "finish cloning gitignore to dockerignore"
