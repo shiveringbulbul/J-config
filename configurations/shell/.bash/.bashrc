@@ -66,4 +66,7 @@ alias rhttpd='sudo systemctl restart httpd'
 # ——  Quick Start  ----
 # ---------------------
 alias comp="docker-compose"
+alias compup="docker-compose up -d"
+alias compdown="docker-compose down"
+dexec() { docker exec -it $@ bash }
 alias 2**專案**="source /Users/jackal/Desktop/**專案**"
