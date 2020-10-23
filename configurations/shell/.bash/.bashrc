@@ -69,4 +69,5 @@ alias comp="docker-compose"
 alias compup="docker-compose up -d"
 alias compdown="docker-compose down"
 dexec() { docker exec -it $@ bash }
+alias dockerdf="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm alpine/dfimage -sV=1.36"
 alias 2**專案**="source /Users/jackal/Desktop/**專案**"
