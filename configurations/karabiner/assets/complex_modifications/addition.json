@@ -1,0 +1,188 @@
+{
+  "title": "【 Addition 】",
+  "author": "JackaL(shiveringbulbul@hotmail.com)",
+  "homepage": "https://github.com/shiveringbulbul/Jackalization",
+  "hostpage": "https://pqrs.org/osx/karabiner/complex_modifications/",
+  "manual": "https://github.com/shiveringbulbul/Jackalization/tree/master/configurations/karabiner/assets/complex_modifications/",
+  "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/shiveringbulbul/Jackalization/master/configurations/karabiner/assets/complex_modifications/addition.json",
+  "rules": [
+    {
+      "description": "【 Typer 】Tab: Tab | Win+Shift",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "tab"
+          },
+          "to_if_alone": [
+            {
+              "key_code": "tab"
+            }
+          ],
+          "to": [
+            {
+              "lazy": true,
+              "key_code": "left_shift",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "0",
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Safari.app $HOME/.config/karabiner/manual/addition.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "【 Hyper 】Esc: CapsLock",
+      "manipulators": [
+        {
+          "type": "basic",
+          "parameters": {
+            "basic.to_if_held_down_threshold_milliseconds": 1000
+          },
+          "from": {
+            "key_code": "escape",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to_if_held_down": [
+            {
+              "key_code": "caps_lock",
+              "halt": true
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "key_code": "vk_none"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "【 Hyper 】CapsLock: Esc | Hyper",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to_if_alone": [
+            {
+              "key_code": "escape"
+            }
+          ],
+          "to": [
+            {
+              "lazy": true,
+              "key_code": "right_shift",
+              "modifiers": [
+                "right_command",
+                "right_control",
+                "right_option"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "0",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_option",
+                "right_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Safari.app $HOME/.config/karabiner/manual/hyper.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "【 Addition 】Right-Command: Del | Alt",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_command",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to_if_alone": {
+            "key_code": "delete_forward"
+          },
+          "to": {
+            "lazy": true,
+            "key_code": "right_option"
+          }
+        }
+      ]
+    },
+    {
+      "description": "【 Addition 】Right-Shft: ⬆︎ | Shift",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_shift",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to_if_alone": {
+            "key_code": "up_arrow"
+          },
+          "to": {
+            "lazy": true,
+            "key_code": "right_shift"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "up_arrow"
+          },
+          "to": {
+            "key_code": "down_arrow"
+          }
+        }
+      ]
+    }
+  ]
+}

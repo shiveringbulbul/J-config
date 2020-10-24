@@ -1,95 +1,14 @@
 {
-  "title": "【 Application 】",
+  "title": "【 Hyper 】",
   "author": "JackaL(shiveringbulbul@hotmail.com)",
   "homepage": "https://github.com/shiveringbulbul/Jackalization",
   "hostpage": "https://pqrs.org/osx/karabiner/complex_modifications/",
   "manual": "https://github.com/shiveringbulbul/Jackalization/tree/master/configurations/karabiner/assets/complex_modifications/",
-  "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/shiveringbulbul/Jackalization/master/configurations/karabiner/assets/complex_modifications/Application.json",
+  "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/shiveringbulbul/Jackalization/master/configurations/karabiner/assets/complex_modifications/hyper.json",
   "rules": [
     {
-      "description": "【 Hyper 】Esc: CapsLock",
+      "description": "【 Hyper 】Hyper + ？ ＝ Application",
       "manipulators": [
-        {
-          "type": "basic",
-          "parameters": {
-            "basic.to_if_held_down_threshold_milliseconds": 1000
-          },
-          "from": {
-            "key_code": "escape",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to_if_held_down": [
-            {
-              "key_code": "caps_lock",
-              "halt": true
-            }
-          ],
-          "to_after_key_up": [
-            {
-              "key_code": "vk_none"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "【 Hyper 】CapsLock: Esc|Hyper",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "caps_lock",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to_if_alone": [
-            {
-              "key_code": "escape"
-            }
-          ],
-          "to": [
-            {
-              "lazy": true,
-              "key_code": "right_shift",
-              "modifiers": [
-                "right_command",
-                "right_control",
-                "right_option"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "【 Application 】Hyper + ? ＝ Application",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "0",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_option",
-                "right_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a Safari.app $HOME/.config/karabiner/manual/application.html"
-            }
-          ]
-        },
         {
           "type": "basic",
           "from": {
@@ -106,6 +25,44 @@
           "to": [
             {
               "shell_command": "open -a AppCleaner.app"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "q",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "q",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_option",
+                "right_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "q",
+              "modifiers": [
+                "left_command"
+              ]
             }
           ]
         },
@@ -201,6 +158,44 @@
           "to": [
             {
               "key_code": "launchpad"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "g",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_option",
+                "right_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a SnippetsLab.app"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "g",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_option",
+                "right_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Docker.app"
             }
           ]
         },
