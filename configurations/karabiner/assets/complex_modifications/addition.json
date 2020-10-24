@@ -7,7 +7,28 @@
   "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/shiveringbulbul/Jackalization/master/configurations/karabiner/assets/complex_modifications/addition.json",
   "rules": [
     {
-      "description": "【 Typer 】Tab: Tab | Win+Shift",
+      "description": "【 Addition 】Manul: Right-Alt + 0",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "0",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Safari.app $HOME/.config/karabiner/manual/index.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "【 Typer 】Tab: Tab | Win + Shift",
       "manipulators": [
         {
           "type": "basic",
@@ -26,23 +47,6 @@
               "modifiers": [
                 "left_control"
               ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "0",
-            "modifiers": {
-              "mandatory": [
-                "left_control",
-                "left_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a Safari.app $HOME/.config/karabiner/manual/addition.html"
             }
           ]
         }
@@ -105,25 +109,6 @@
                 "right_control",
                 "right_option"
               ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "0",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_option",
-                "right_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a Safari.app $HOME/.config/karabiner/manual/hyper.html"
             }
           ]
         }
