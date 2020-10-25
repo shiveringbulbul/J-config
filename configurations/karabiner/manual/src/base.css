@@ -40,6 +40,32 @@ body {
     display: flex;
 }
 
+.area-s1 {
+    background-color: rgb(60, 173, 219, 0.2);
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    display: flex;
+    text-align: center
+}
+
+.area-s2 {
+    background-color: rgb(200, 140, 100, 0.6);
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    display: flex;
+    text-align: center
+}
+
+.red-t {
+    color: red
+}
+
+.blue-t {
+    color: blue
+}
+
 .anjian {
     width: 40px;
     height: 40px;
