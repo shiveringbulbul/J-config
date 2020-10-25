@@ -19,18 +19,8 @@ open -a Preview.app /Users/jackal/Desktop/Coding/Jackalization/configurations/ka
 win applications   -
 
 
-受影響的termail
-d 全部縮小回到桌面
-f spotlight         -
-m 縮小
-l 鎖定
-a 通知               -
-g finder 中的GOTO    -
-u 系統工具            -
-
 
 
 
 
 "shell_command": "open -a Activity\\ Monitor.app"
-"shell_command": "/System/Library/Input\\ Methods/CharacterPalette.app"
