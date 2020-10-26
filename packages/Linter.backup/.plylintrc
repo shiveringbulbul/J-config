@@ -2,13 +2,19 @@
 jobs=2
 ignore=migrations
 init-hook="
-          import os, sys
-          home = os.path.expanduser('~')
-          target = os.path.join(home, 'Desktop', 'odiall')  # <- EDIT THIS LINE
-          envs_path = os.path.join(home, 'Desktop', 'envs')
-          envs = (folder for folder in os.listdir(envs_path))
-          paths = [os.path.join(os.path.expanduser('~'), 'Desktop', 'envs', env, 'lib', 'python3.7', 'site-packages') for env in envs]
-          sys.path = [target] + paths + sys.path
+          import sys
+          from pathlib import Path
+
+          project_name = 'odiall'  # <- EDIT THIS LINE
+
+          desktop = Path.home() / 'Desktop'
+          target = str(desktop / project_name)
+          envs = desktop / 'envs'
+          envs = [
+              str(sub / 'lib' / 'python3.7' / 'site-packages')
+              for sub in envs.iterdir() if sub.is_dir()
+          ]
+          sys.path = [target] + envs + sys.path
           "
 # load-plugins=pylint_django
 persistent=yes
