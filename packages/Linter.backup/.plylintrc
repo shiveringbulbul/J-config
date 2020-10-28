@@ -38,6 +38,7 @@ disable=<訊息編號>
 '''
   C,
   R,
+  I,
   broad-except,
   unbalanced-tuple-unpacking,
   W0222,
