@@ -3,19 +3,19 @@ format = %(path)s  %(row)d:%(col)d  [%(code)s] %(text)s
 max-line-length = 85
 max-complexity = 10
 filename =
-    *.py
+  *.py
 exclude =
-    .git,
-    .svn,
-    .vscode,
-    __pycache__
+  .git,
+  .svn,
+  .vscode,
+  __pycache__
 select =
-    F,
-    E,
-    W,
-    C
+  F,
+  E,
+  W,
+  C
 ignore =
-    E133,
-    E303,
-    W503,
-    W504
+  E133,
+  E303,
+  W503,
+  W504
