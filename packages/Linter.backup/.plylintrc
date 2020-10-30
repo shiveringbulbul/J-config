@@ -1,6 +1,7 @@
 [MASTER]
 jobs=2
-ignore=migrations
+ignore=
+  migrations
 init-hook="
           import sys
           from pathlib import Path
@@ -16,46 +17,34 @@ init-hook="
           ]
           sys.path = [target] + envs + sys.path
           "
-# load-plugins=pylint_django
+load-plugins=pylint_django
 persistent=yes
 rcfile=
 
 [MESSAGES CONTROL]
-# enable=
-#   F,
-#   E,
-#   anomalous-backslash-in-string,
-#   bad-format-string,
-#   bad-open-mode,
-#   binary-op-exception,
-#   duplicate-key,
-#   global-variable-not-assigned,
-#   unnecessary-semicolon,
-#   unreachable,
-#   unused-variable
 enable=all
-disable=<訊息編號>
-'''
+disable=
   C,
   R,
   I,
   broad-except,
   unbalanced-tuple-unpacking,
-  W0222,
   W0223,
   W0621
-'''
 
 [MISCELLANEOUS]
-# notes=FIXME,TODO,XXX
+notes=FIXME,TODO
 
 [REPORTS]
 include-ids=yes
 msg-template={path}:{line} | {msg_id}:{symbol} | {obj} | {msg}
 
+[VARIABLES]
+ignored-argument-names=_.*|args|kwargs|sender
+
 [FORMAT]
-max-line-length=200
-max-module-lines=500
+max-line-length=128
+max-module-lines=128
 indent-string='    '
 
 [SIMILARITIES]
@@ -66,4 +55,11 @@ min-similarity-lines=4
 
 [TYPECHECK]
 # used in django-models
-generated-members=REQUEST,_meta,acl_users,aq_parent,id,objects
+generated-members=
+  REQUEST,
+  [a-zA-Z]+_set,
+  _meta,
+  acl_users,
+  aq_parent,
+  id,
+  objects
