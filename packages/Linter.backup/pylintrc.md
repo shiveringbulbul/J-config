@@ -22,6 +22,8 @@
   | :bash:`pylint filename --disable=C,R`
 - | 列出所有 pylint 訊息
   | :bash:`pylint --list-msgs`
+- | 其他參數設定
+  | https://www.codeac.io/documentation/pylint-configuration.html
 
 
 .. raw:: html
