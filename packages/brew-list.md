@@ -6,13 +6,15 @@ brew pin python  # 鎖定 Python 版本
 brew update
 
 
-brew update will update the list of available formulae, and brew upgrade will upgrade any outdated packages
+- `brew update` will update the list of available formulae
+- `brew upgrade` will upgrade any outdated packages
 
 
 
 
 brew cask upgrade
-brew [cask] list
+brew cask list
+brew cask zap [package]
 
 
 
@@ -63,6 +65,8 @@ brew cleanup —-prune 0
 `brew cask install sloth`  
 - 完全解除安裝  
 `brew cask install appcleaner`  
+- 系統設定備份  
+`brew install mackup`
 - 麥克風、攝影機，安全監控  
 `brew cask install oversight`  
 - 隱藏選單列  
@@ -113,6 +117,7 @@ brew cleanup —-prune 0
 `brew cask install https://raw.githubusercontent.com/Homebrew/homebrew-cask/6a96e5ea44803e52a43c0c89242390f75d1581ab/Casks/kdiff3.rb  # kdiff3`  
 - 主機管理  
 `brew cask install termius`  
+`brew install google-cloud-sdk`
 - 容器  
 `brew cask install docker`  
 - API 調適  
@@ -143,6 +148,9 @@ brew cleanup —-prune 0
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py --force-reinstall
 
+
+[x] Node.js
+`brew install node`
 
 
 [x] Kite
