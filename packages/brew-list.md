@@ -110,6 +110,7 @@ brew cleanup —-prune 0
 - 文字編輯  
 `brew install vim`  
 `brew install nano`  
+`brew install rsync`  
 `brew cask install atom`  
 `brew cask install visual-studio-code`  
 - 版本控制輔助  
@@ -117,7 +118,7 @@ brew cleanup —-prune 0
 `brew cask install https://raw.githubusercontent.com/Homebrew/homebrew-cask/6a96e5ea44803e52a43c0c89242390f75d1581ab/Casks/kdiff3.rb  # kdiff3`  
 - 主機管理  
 `brew cask install termius`  
-`brew install google-cloud-sdk`
+`brew install google-cloud-sdk`  
 - 容器  
 `brew cask install docker`  
 - API 調適  
@@ -150,7 +151,10 @@ python get-pip.py --force-reinstall
 
 
 [x] Node.js
-`brew install node`
+```bash
+$ brew install node
+$ npm install -g npx
+```
 
 
 [x] Kite
