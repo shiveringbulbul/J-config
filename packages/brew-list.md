@@ -102,6 +102,8 @@ brew cleanup —-prune 0
 - 瀏覽器
 `brew cask install opera`  
 `brew cask install google-chrome`  
+- 通訊
+`brew cask install slack`  
 
 
 <!-- ╠═══╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═════╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═══╣ -->
