@@ -121,6 +121,8 @@ brew cleanup —-prune 0
 - 主機管理  
 `brew cask install termius`  
 `brew install google-cloud-sdk`  
+- 網路管理  
+`brew cask install wireshark`  
 - 容器  
 `brew cask install docker`  
 - API 調適  
