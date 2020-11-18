@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
 # .gitignore should be in the parent directory of this script
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+DIR=$(dirname "$(readlink -f "$0")")
 cd $DIR && cd ..
 
 # writing
