@@ -29,11 +29,12 @@ disable=
   I,
   abstract-method,
   broad-except,
+  fixme,
   redefined-outer-name,
   unbalanced-tuple-unpacking
 
 [MISCELLANEOUS]
-# notes=FIXME,TODO
+notes=FIXME,TODO
 
 [REPORTS]
 include-ids=yes
