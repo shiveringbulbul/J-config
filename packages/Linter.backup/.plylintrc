@@ -27,13 +27,13 @@ disable=
   C,
   R,
   I,
+  abstract-method,
   broad-except,
-  unbalanced-tuple-unpacking,
-  W0223,
-  W0621
+  redefined-outer-name,
+  unbalanced-tuple-unpacking
 
 [MISCELLANEOUS]
-notes=FIXME,TODO
+# notes=FIXME,TODO
 
 [REPORTS]
 include-ids=yes
