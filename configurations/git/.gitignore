@@ -19,8 +19,9 @@ Thumbs.db
 .flake8
 .pycodestyle
 .pylintrc
+!tools/.pylintrc
 # Logger
-logs/*
+*.log
 
 # ╔══════════╗
 # ╠  Python  ╣
