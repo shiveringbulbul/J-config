@@ -4,7 +4,14 @@
 alias shut="sudo shutdown -h now"
 alias rebo="sudo reboot"
 alias hosts="less /etc/hosts"
-jalias() { cat ~/.bashrc | grep "$@" }
+jalias() {
+  if [ "$1" = "" ]
+  then
+    less ~/.bashrc
+  else
+    cat ~/.bashrc | grep "$@"
+  fi
+}
 
 
 # ╔═══════════╗
@@ -78,7 +85,7 @@ alias compdown="docker-compose down"
 dexec() {
   if [ "$2" = "" ]
   then
-    docker exec -it bash
+    docker exec -it $1 bash
   else
     docker exec -it $@
   fi
