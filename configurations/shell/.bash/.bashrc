@@ -4,6 +4,7 @@
 alias shut="sudo shutdown -h now"
 alias rebo="sudo reboot"
 alias hosts="less /etc/hosts"
+jalias() { cat ~/.bashrc | grep "$@" }
 
 
 # ╔═══════════╗
@@ -21,6 +22,7 @@ alias histsize"echo $HISTSIZE"
 # ╠  homebrew  ╣
 # ╚════════════╝
 alias bs="brew services"
+
 
 # ╔══════════╗
 # ╠  folder  ╣
