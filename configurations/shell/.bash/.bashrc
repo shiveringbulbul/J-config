@@ -1,73 +1,87 @@
-# --------------
-# ----  OS  ----
-# --------------
-alias cd2="cd ../.."
-alias cd3="cd ../../.."
-alias cd4="cd ../../../.."
-alias delhis="cat /dev/null > ~/.bash_history && history -c && exec $SHELL -l"
+# ╔══════════╗
+# ╠  system  ╣
+# ╚══════════╝
 alias shut="sudo shutdown -h now"
 alias rebo="sudo reboot"
 alias hosts="sudo vim /etc/hosts"
 alias remem="sudo su -l root -c 'sync; echo 1 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a'"
 alias bs="brew services"
 
-# alias exshow='f(){ echo before "$1" after "$2" all "$@";  unset -f f;}; f'
-# some os that you can detect °C
-# alias hot="paste <(cat /sys/class/thermal/thermal_zone*/type) <(cat /sys/class/thermal/thermal_zone*/temp) | column -s $'\t' -t | sed 's/\(.\)..$/.\1°C/'"
-# alias hot="vcgencmd measure_temp"
 
-# ----------------
-# ----  File  ----
-# ----------------
+# ╔═══════════╗
+# ╠  history  ╣
+# ╚═══════════╝
+alias hisdel="cat /dev/null > ~/.bash_history && history -c && exec $SHELL -l"
+his() { history | tail -1024 | grep "$@" | less }
+alias his10="hisotry -10 -1"
+alias his20="hisotry -20 -1"
+alias hisoff="HISTSIZE=0"
+alias histsize"echo $HISTSIZE"
+
+
+# ╔══════════╗
+# ╠  folder  ╣
+# ╚══════════╝
+alias cdcd="cd ../.."
+alias cdcdcd="cd ../../.."
+alias dirs="dirs -v"
 alias ll="ls -l"
 alias la="ls -al"
-alias home="cd ~/Desktop"
-alias treegod="tree -I '__pycache__|static' -L 3 -F --charset utf8"
 alias vi="vim"
+alias home="cd ~/Desktop"
+alias jtree="tree -I '__pycache__|static' -L 3 -F --charset utf8"
+alias jserver="python3 -m http.server --bind 0.0.0.0 4444"
 
-# ---------------
-# ----  git  ----
-# ---------------
+
+# ╔═══════╗
+# ╠  git  ╣
+# ╚═══════╝
 alias gitall="git add --all"
 alias gitrecommit="git commit --amend"
 alias gitfpull="git pull --allow-unrelated-histories"
-alias gitfpush="git push --force"
+alias gitfpush="git push --force-with-lease"
 alias gitlog="git log --all --graph --oneline"
+alias git7="git rev-parse --short HEAD"
 alias gitgui="gitk"
 
-# ------------------
-# ----  Python  ----
-# ------------------
-alias p="python3"
-alias pip="pip3"
-alias po="poetry"
-alias porun="poetry run"
-alias posh="poetry shell"
-alias pserver="python3 -m http.server"
 
-# ------------------
-# ----  Django  ----
-# ------------------
-alias p="python3"
-alias dj="python3 manage.py"
+# ╔══════════╗
+# ╠  python  ╣
+# ╚══════════╝
+alias p="python"
+alias rmpycache="find . -type d -name '__pycache__' -exec rm -r {} +"
+alias po="poetry"
+alias posh="poetry shell"
+
+
+# ╔══════════╗
+# ╠  django  ╣
+# ╚══════════╝
 alias djr="python3 manage.py runserver --insecure 0.0.0.0:80"
 alias djc="python3 manage.py collectstatic --clear"
-alias djcls="python3 manage.py clear_cache && sudo python36 manage.py clean_pyc && sudo find . -type d -name '__pycache__' -exec rm -r {} +"
-alias djs="python3 manage.py runscript"
-
-# ----------------------
-# ----  Web Server  ----
-# ----------------------
-alias html='cd /var/www/html'
-alias rhttpd='sudo systemctl restart httpd'
+alias djcls="python3 manage.py clear_cache"
+alias djscript="python3 manage.py runscript"
 
 
-# ---------------------
-# ——  Quick Start  ----
-# ---------------------
+# ╔══════════╗
+# ╠  docker  ╣
+# ╚══════════╝
+alias dockerdf="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm alpine/dfimage -sV=1.36"
 alias comp="docker-compose"
 alias compup="docker-compose up -d"
 alias compdown="docker-compose down"
-dexec() { docker exec -it $@ bash }
-alias dockerdf="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm alpine/dfimage -sV=1.36"
-alias 2**專案**="source /Users/jackal/Desktop/**專案**"
+dexec() {
+  if [ "$2" = "" ]
+  then
+    docker exec -it bash
+  else
+    docker exec -it $@
+  fi
+}
+
+
+# ╔═════════╗
+# ╠  quick  ╣
+# ╚═════════╝
+# alias 2**專案**="cd /Users/jackal/Desktop/**專案**"
+pj() { cd "/Users/jackal/Desktop/$@" }

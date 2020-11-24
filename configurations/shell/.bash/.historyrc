@@ -1,0 +1,4 @@
+# ignore space
+HISTCONTROL=ignorespace
+# ignore duplicate commands
+HISTCONTROL=ignoredups
