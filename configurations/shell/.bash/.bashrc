@@ -3,9 +3,7 @@
 # ╚══════════╝
 alias shut="sudo shutdown -h now"
 alias rebo="sudo reboot"
-alias hosts="sudo vim /etc/hosts"
-alias remem="sudo su -l root -c 'sync; echo 1 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a'"
-alias bs="brew services"
+alias hosts="less /etc/hosts"
 
 
 # ╔═══════════╗
@@ -18,6 +16,11 @@ alias his20="hisotry -20 -1"
 alias hisoff="HISTSIZE=0"
 alias histsize"echo $HISTSIZE"
 
+
+# ╔════════════╗
+# ╠  homebrew  ╣
+# ╚════════════╝
+alias bs="brew services"
 
 # ╔══════════╗
 # ╠  folder  ╣
