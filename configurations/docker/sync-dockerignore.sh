@@ -6,7 +6,9 @@ cd $DIR && cd ..
 
 # writing
 cat .gitignore > .dockerignore
-cat $DIR/.dockerignore-suffix.src >> .dockerignore
-
-# finished
-echo "finish cloning gitignore to dockerignore"
+if cat $DIR/.dockerignore-suffix.src >> .dockerignore
+then
+  echo "sync succeeded"
+else
+  echo "sync failed"
+fi
