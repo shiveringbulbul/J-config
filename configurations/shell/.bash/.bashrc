@@ -82,6 +82,8 @@ alias dockerdf="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm alp
 alias comp="docker-compose"
 alias compup="docker-compose up -d"
 alias compdown="docker-compose down"
+alias comprodup="docker-compose --env-file=./secrets/.env -f docker-compose.yml -f docker-compose.prod.yml up -d"
+alias comprodown="docker-compose --env-file=./secrets/.env -f docker-compose.yml -f docker-compose.prod.yml down"
 dexec() {
   if [ "$2" = "" ]
   then
