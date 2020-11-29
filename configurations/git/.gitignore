@@ -1,18 +1,21 @@
 # ╔══════════╗
 # ╠  System  ╣
 # ╚══════════╝
-# Image Cache File in Windows OS
-Thumbs.db
-# Desktop Services Store in Mac OS
+# Mac: desktop services store
 .DS_Store
-# Google Cloud Sync
+# Windows: image cache file
+Thumbs.db
+# Google: google cloud sync
 .tmp.drivedownload/
 *.driveupload
+# folder structure force keep
+!**/.gitkeep
 
 # ╔═══════════╗
 # ╠  Develop  ╣
 # ╚═══════════╝
 # Visual Studio Settings
+.devcontainer/
 .vscode/
 # Coding Style
 .editorconfig
@@ -20,6 +23,8 @@ Thumbs.db
 .pycodestyle
 .pylintrc
 !tools/.pylintrc
+# Docker
+.docker/var/
 # Logger
 *.log
 
@@ -39,3 +44,9 @@ pyproject.toml
 # Media, Static
 media/*
 static/*
+
+# ╔══════════╗
+# ╠  Secret  ╣
+# ╚══════════╝
+# some files you wanna store: like tls certificate
+secrets/
