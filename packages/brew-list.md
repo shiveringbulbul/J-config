@@ -94,6 +94,8 @@ brew cleanup —-prune 0
 - 文字編輯  
 `brew cask install textmate`  
 - 文書處理  
+`brew install jq`  
+`brew install rsync`  
 `brew cask install typora`  
 `brew cask install evernote`  
 `brew cask install teamviewer`  
@@ -112,7 +114,6 @@ brew cleanup —-prune 0
 - 文字編輯  
 `brew install vim`  
 `brew install nano`  
-`brew install rsync`  
 `brew cask install atom`  
 `brew cask install visual-studio-code`  
 - 版本控制輔助  
