@@ -96,6 +96,7 @@ brew cleanup —-prune 0
 - 文書處理  
 `brew install jq`  
 `brew install rsync`  
+`brew install watch`  
 `brew cask install typora`  
 `brew cask install evernote`  
 `brew cask install teamviewer`  
