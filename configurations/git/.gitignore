@@ -48,5 +48,4 @@ static/*
 # ╔══════════╗
 # ╠  Secret  ╣
 # ╚══════════╝
-# some files you wanna store: like tls certificate
 secrets/
