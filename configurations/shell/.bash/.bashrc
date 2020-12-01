@@ -94,6 +94,23 @@ dexec() {
 }
 
 
+# ╔═══════╗
+# ╠  GCP  ╣
+# ╚═══════╝
+unalias gcp
+gcp() {
+  gcloud compute ssh root@"$@"
+}
+gcpscp() {
+  gcloud compute scp --recurse $@
+}
+
+
+# ╔════════╗
+# ╠  Kube  ╣
+# ╚════════╝
+
+
 # ╔═════════╗
 # ╠  quick  ╣
 # ╚═════════╝
