@@ -24,8 +24,8 @@ tig
 dos2unix
 pandoc
 gpg
-bash-completion zsh-completion nmap tree curl tmux
-
+bash-completion zsh-completion  tree curl tmux
+nmap
 gist
 
 
