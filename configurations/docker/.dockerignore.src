@@ -3,8 +3,5 @@
 # ╠  Appending  ╣
 # ╚═════════════╝
 # wrapping by "gitignore_2_dockerignore.sh"
-.git
 .cache
 **/*.class
-*.txt
-!requirements.txt
