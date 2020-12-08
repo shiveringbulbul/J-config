@@ -60,7 +60,8 @@ alias gitgui="gitk"
 # ╔══════════╗
 # ╠  python  ╣
 # ╚══════════╝
-alias p="python"
+alias p="python3"
+alias pip="pip3"
 alias rmpycache="find . -type d -name '__pycache__' -exec rm -r {} +"
 alias po="poetry"
 alias posh="poetry shell"
@@ -70,6 +71,7 @@ alias posh="poetry shell"
 # ╠  django  ╣
 # ╚══════════╝
 alias djr="python3 manage.py runserver --insecure 0.0.0.0:80"
+alias djsh="python3 manage.py shell_plus"
 alias djc="python3 manage.py collectstatic --clear"
 alias djcls="python3 manage.py clear_cache"
 alias djscript="python3 manage.py runscript"

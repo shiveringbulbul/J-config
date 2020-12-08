@@ -27,3 +27,6 @@ insert_final_newline = false
 
 [*.sh]
 indent_size = 2
+
+[*.{yaml,yml}]
+indent_size = 2

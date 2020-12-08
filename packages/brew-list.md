@@ -153,6 +153,7 @@ brew cleanup —-prune 0
 
 
 [x] Python 3  -  pip
+brew install python@3.9
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py --force-reinstall
 
