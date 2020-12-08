@@ -4,6 +4,7 @@
 alias shut="sudo shutdown -h now"
 alias rebo="sudo reboot"
 alias hosts="less /etc/hosts"
+alias myip="echo -e \"Private IP: $(curl -s ipinfo.io/ip)\nGlobal  IP: $(ipconfig getifaddr en0)\""
 jalias() {
   if [ "$1" = "" ]
   then
