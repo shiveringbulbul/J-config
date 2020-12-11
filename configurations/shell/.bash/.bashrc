@@ -76,6 +76,9 @@ alias djscript="python3 manage.py runscript"
 # ╚══════════╝
 alias dockerdf="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm alpine/dfimage -sV=1.36"
 alias dockercls="docker container prune -f"
+drun() {
+  docker run --name $1 -it $@
+}
 dexec() {
   if [ $# -le 1 ]
   then
