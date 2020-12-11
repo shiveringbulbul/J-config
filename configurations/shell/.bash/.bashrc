@@ -77,11 +77,11 @@ alias djscript="python3 manage.py runscript"
 alias dockerdf="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm alpine/dfimage -sV=1.36"
 alias dockercls="docker container prune -f"
 dexec() {
-  if [ "$2" = "" ]
+  if [ $# -le 1 ]
   then
-    docker exec -it $1 bash
+    echo docker exec -it $1 bash
   else
-    docker exec -it $@
+    echo docker exec -it $@
   fi
 }
 alias comp="docker-compose"
