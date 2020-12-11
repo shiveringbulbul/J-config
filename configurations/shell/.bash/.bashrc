@@ -82,9 +82,9 @@ drun() {
 dexec() {
   if [ $# -le 1 ]
   then
-    echo docker exec -it $1 bash
+    docker exec -it $1 bash
   else
-    echo docker exec -it $@
+    docker exec -it $@
   fi
 }
 alias comp="docker-compose"
