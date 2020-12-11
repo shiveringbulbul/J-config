@@ -5,14 +5,7 @@ alias shut="sudo shutdown -h now"
 alias rebo="sudo reboot"
 alias hosts="less /etc/hosts"
 alias myip="echo -e \"Private IP: $(curl -s ipinfo.io/ip)\nGlobal  IP: $(ipconfig getifaddr en0)\""
-jalias() {
-  if [ "$1" = "" ]
-  then
-    less ~/.bashrc
-  else
-    cat ~/.bashrc | grep "$@"
-  fi
-}
+alias jalias="less ~/.bashrc"
 
 
 # ╔═══════════╗
@@ -82,11 +75,7 @@ alias djscript="python3 manage.py runscript"
 # ╠  docker  ╣
 # ╚══════════╝
 alias dockerdf="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm alpine/dfimage -sV=1.36"
-alias comp="docker-compose"
-alias compup="docker-compose up -d"
-alias compdown="docker-compose down"
-alias comprodup="docker-compose --env-file=./secrets/.env -f docker-compose.yml -f docker-compose.prod.yml up -d"
-alias comprodown="docker-compose --env-file=./secrets/.env -f docker-compose.yml -f docker-compose.prod.yml down"
+alias dockercls="docker container prune -f"
 dexec() {
   if [ "$2" = "" ]
   then
@@ -95,6 +84,11 @@ dexec() {
     docker exec -it $@
   fi
 }
+alias comp="docker-compose"
+alias compup="docker-compose up -d"
+alias compdown="docker-compose down"
+alias comprodup="docker-compose --env-file=./secrets/.env -f docker-compose.yml -f docker-compose.prod.yml up -d"
+alias comprodown="docker-compose --env-file=./secrets/.env -f docker-compose.yml -f docker-compose.prod.yml down"
 
 
 # ╔═══════╗
@@ -107,11 +101,66 @@ gcp() {
 gcpscp() {
   gcloud compute scp --recurse $@
 }
+gcr() {
+  if [ $# -eq 0 ]
+  then
+    gcloud container images list --repository=asia.gcr.io/$(gcloud config get-value project)
+  else
+    gcloud container images list-tags $1
+  fi
+}
+gs() {
+  gsutil ls
+}
+unalias gke
+gke() {
+  if [ $# -eq 0 ]
+  then
+    echo "
+      gcloud config list
+      gcloud container clusters list
+      gcloud container clusters get-credentials <cluster-name> --zone <zone>
+    "
+  elif [ "$1" == "ls" ]
+  then
+    gcloud container clusters list
+  fi
+}
 
 
 # ╔════════╗
 # ╠  Kube  ╣
 # ╚════════╝
+alias kb="kubectl"
+alias kball="kubectl get all"
+alias kbing="kubectl get ing"
+alias kbrep="kubectl get replicaset"
+alias kbdep="kubectl get deployment"
+alias kbsvc="kubectl get svc"
+alias kbpod="kubectl get pod"
+kbexec() {
+  kubectl exec -it $1 -- sh $@
+}
+kbwatch() {
+  if [ $# -eq 0 ]
+  then
+    watch -bcn 5 "kubectl get pods"
+  else
+    watch -bcn 5 "kubectl get $@"
+  fi
+}
+kbsec() {
+  if [ $# -eq 0 ]
+  then
+    kubectl get secret
+  else
+    echo "
+      kubectl edit secret <secret-name>
+      kubectl create secret generic <secret-name> \\
+        --from-literal=<key>=<value> --from-literal=<key>=<value>
+    "
+  fi
+}
 
 
 # ╔═════════╗
