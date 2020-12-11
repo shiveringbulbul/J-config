@@ -142,7 +142,7 @@ alias kbdep="kubectl get deployment"
 alias kbsvc="kubectl get svc"
 alias kbpod="kubectl get pod"
 kbexec() {
-  kubectl exec -it $1 -- sh $@
+  kubectl exec -it $1 -- sh
 }
 kbwatch() {
   if [ $# -eq 0 ]
