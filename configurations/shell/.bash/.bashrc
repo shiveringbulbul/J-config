@@ -142,7 +142,7 @@ alias kbdep="kubectl get deployment"
 alias kbsvc="kubectl get svc"
 alias kbpod="kubectl get pod"
 kbrscls() {
-="kubectl delete $(kubectl get all | grep replicaset.apps | grep "0         0         0" | cut -d' ' -f 1)"
+  kubectl delete $(kubectl get all | grep replicaset.apps | grep "0         0         0" | cut -d " " -f 1)
 }
 kbexec() {
   kubectl exec -it $1 -- sh
