@@ -1,0 +1,100 @@
+version: "3.8"
+
+
+services:
+
+  odiall-nginx:
+    image: nginx:1.19.4-alpine
+    container_name: odiall-nginx
+    depends_on:
+      - odiall
+    volumes:
+      - .docker/nginx/cloudflare.conf:/etc/nginx/conf.d/cloudflare.conf:ro
+      - .docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - .docker/nginx/ssl.conf:/etc/nginx/conf.d/ssl.conf:ro
+      - .docker/var/log/nginx:/var/log/nginx
+      - .docker/var/run:/var/run
+      - .docker/var/www:/var/www
+      - ./secrets/cloudflare.crt:/etc/ssl/cloudflare.crt:ro
+      - ./secrets/cloudflare.key:/etc/ssl/cloudflare.key:ro
+      - ./secrets/dhparam.pem:/etc/ssl/dhparam.pem:ro
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      LANG: en_US.UTF-8
+      LC_ALL: en_US.UTF-8
+    restart: always
+    command: >
+      sh -c "
+        while [ ! -S /var/run/uwsgi.sock ]
+        do
+          echo uwsgi not yet
+          sleep 1
+        done
+        nginx -g 'daemon off;'
+      "
+    healthcheck:
+      test: curl --fail https://localhost/
+      start_period: 60s
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  odiall:
+    build:
+      context: .
+      args:
+        DEBUG: ${DEBUG:-0}
+    image: odiall.dev
+    container_name: odiall
+    depends_on:
+      - odiall-postgres
+      - odiall-redis
+    volumes:
+      - .:/srv/odiall
+    ports:
+      - 8000:8000
+    working_dir: ${PROJ_DIR}
+    environment:
+      PYTHONBREAKPOINT: ipdb.set_trace
+      PYTHONPATH: ${PROJ_DIR}
+      PYTHONUNBUFFERED: 1
+      DEBUG: ${DEBUG:-0}
+      # Django
+      SENTRY_DNS: ${SENTRY_DNS}
+      SECRET_KEY: ${SECRET_KEY}
+      ADMIN_USER: ${ADMIN_USER}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      SWAGGER_USER: ${SWAGGER_USER}
+      SWAGGER_PASSWORD: ${SWAGGER_PASSWORD}
+      # DB
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      REDIS_HOST: ${REDIS_HOST}
+      # GCloud
+      GOOGLE_APPLICATION_CREDENTIALS: ${GOOGLE_APPLICATION_CREDENTIALS}
+      GS_BUCKET_NAME: ${GS_BUCKET_NAME}
+      GS_PROJECT_ID: ${GS_PROJECT_ID}
+    restart: always
+    command: sh entrypoint.sh
+    healthcheck:
+      test: /srv/odiall/tools/heartbeat.sh
+      start_period: 30s
+      interval: 3s
+      timeout: 3s
+      retries: 3
+
+  odiall-postgres:
+    deploy:
+      replicas: 1
+
+  odiall-autoheal:
+    image: willfarrell/autoheal
+    container_name: odiall-autoheal
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      AUTOHEAL_CONTAINER_LABEL: all
+    restart: always
