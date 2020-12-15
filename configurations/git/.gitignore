@@ -43,7 +43,6 @@ pyproject.toml
 # ╚══════════╝
 # Media, Static
 media/*
-static/*
 
 # ╔══════════╗
 # ╠  Secret  ╣
