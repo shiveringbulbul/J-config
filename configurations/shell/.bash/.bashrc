@@ -46,8 +46,10 @@ alias gitall="git add --all"
 alias gitrecommit="git commit --amend"
 alias gitfpull="git pull --allow-unrelated-histories"
 alias gitfpush="git push --force-with-lease"
-alias gitlog="git log --all --graph --oneline"
+alias gitlog="git log --all --graph --oneline --color=always | less"
+alias gitls="git log --color=always | less"
 alias git7="git rev-parse --short HEAD"
+alias gitremote="git remote prune gitlab && git branch -r"
 alias gitgui="gitk"
 
 
