@@ -77,18 +77,48 @@ alias djscript="python3 manage.py runscript"
 # ╠  docker  ╣
 # ╚══════════╝
 alias dockerdf="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm alpine/dfimage -sV=1.36"
-alias dockercls="docker container prune -f"
 drun() {
   docker run --name $1 -it ${@:2}
 }
 dexec() {
   if [ $# -le 1 ]
   then
-    docker exec -it $1 bash 2 > /dev/null || docker exec -it $1 sh
+    docker exec -it $1 bash 2> /dev/null || docker exec -it $1 sh
   else
     docker exec -it $@
   fi
 }
+dcls() {
+  if [ ! $# -eq 1 ]; then
+    echo dcls all
+    echo dcls container
+    echo dcls image
+    echo dcls image
+  else
+    if [ "$1" = "all" ]; then
+      docker container prune -f
+      docker image rm $(docker image ls -qf dangling=true) 2> /dev/null || echo No image need to remove.
+      docker volume rm $(docker volume ls -qf dangling=true) 2> /dev/null || echo No volume need to remove.
+    elif [ "$1" = "container" ]; then
+      docker container prune -f
+    elif [ "$1" = "image" ]; then
+      docker image rm $(docker image ls -qf dangling=true) 2> /dev/null || echo No image need to remove.
+    elif [ "$1" = "volume" ]; then
+      docker volume rm $(docker volume ls -qf dangling=true) 2> /dev/null || echo No volume need to remove.
+    else
+      echo dcls all
+      echo dcls container
+      echo dcls image
+      echo dcls image
+    fi
+  fi
+}
+alias dockercls=" &&  && docker volume ls -qf dangling=true"
+
+
+# ╔══════════╗
+# ╠  docker  ╣
+# ╚══════════╝
 alias comp="docker-compose"
 alias compup="docker-compose up -d"
 alias compdown="docker-compose down"
@@ -126,7 +156,7 @@ gke() {
       gcloud container clusters list
       gcloud container clusters get-credentials <cluster-name> --zone <zone>
     "
-  elif [ "$1" == "ls" ]
+  elif [ "$1" = "ls" ]
   then
     gcloud container clusters list
   fi
