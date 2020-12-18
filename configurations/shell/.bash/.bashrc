@@ -113,7 +113,6 @@ dcls() {
     fi
   fi
 }
-alias dockercls=" &&  && docker volume ls -qf dangling=true"
 
 
 # ╔══════════╗
