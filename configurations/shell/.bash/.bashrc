@@ -176,7 +176,15 @@ kbrscls() {
   kubectl delete $(kubectl get all | grep replicaset.apps | grep "0         0         0" | cut -d " " -f 1)
 }
 kbexec() {
-  kubectl exec -it $1 -- sh
+  if [ $# -eq 1 ]
+  then
+    kubectl exec -it $1 -- sh
+  elif [ $# -eq 2 ]
+  then
+    kubectl exec -it $1 --container=$2 -- sh
+  else
+    echo kubectl exec -it \<\$1\> --container=\<\$2\> -- sh
+  fi
 }
 kbwatch() {
   if [ $# -eq 0 ]
