@@ -13,8 +13,8 @@ alias jalias="less ~/.bashrc"
 # ╚═══════════╝
 alias hisdel="cat /dev/null > ~/.bash_history && history -c && exec $SHELL -l"
 his() { history | tail -1024 | grep "$@" | less }
-alias his10="hisotry -10 -1"
-alias his20="hisotry -20 -1"
+alias his10="history -10 -1"
+alias his20="history -20 -1"
 alias hisoff="HISTSIZE=0"
 alias histsize"echo $HISTSIZE"
 
