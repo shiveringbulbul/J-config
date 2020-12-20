@@ -93,7 +93,7 @@ dcls() {
     echo dcls all
     echo dcls container
     echo dcls image
-    echo dcls image
+    echo dcls volume
   else
     if [ "$1" = "all" ]; then
       docker container prune -f
@@ -109,7 +109,7 @@ dcls() {
       echo dcls all
       echo dcls container
       echo dcls image
-      echo dcls image
+      echo dcls volume
     fi
   fi
 }
