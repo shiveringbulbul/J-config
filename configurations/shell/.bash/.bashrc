@@ -129,10 +129,10 @@ alias comprodown="docker-compose --env-file=./secrets/.env -f docker-compose.yml
 # ╠  GCP  ╣
 # ╚═══════╝
 unalias gcp
-gcp() {
-  gcloud compute ssh root@"$@"
+gce() {
+  gcloud compute ssh $@
 }
-gcpscp() {
+gcescp() {
   gcloud compute scp --recurse $@
 }
 gcr() {
