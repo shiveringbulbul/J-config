@@ -23,10 +23,6 @@ Thumbs.db
 .pycodestyle
 .pylintrc
 !tools/.pylintrc
-# Docker
-.docker/var/
-# Logger
-*.log
 
 # ╔══════════╗
 # ╠  Python  ╣
@@ -39,12 +35,9 @@ poetry.lock
 pyproject.toml
 
 # ╔══════════╗
-# ╠  Django  ╣
-# ╚══════════╝
-# Media, Static
-media/*
-
-# ╔══════════╗
 # ╠  Secret  ╣
 # ╚══════════╝
+*.log
+logs/
+media/*
 secrets/
