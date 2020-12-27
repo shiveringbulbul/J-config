@@ -11,33 +11,37 @@ Thumbs.db
 # folder structure force keep
 !**/.gitkeep
 
-# ╔═══════════╗
-# ╠  Develop  ╣
-# ╚═══════════╝
+# ╔══════════╗
+# ╠  Editor  ╣
+# ╚══════════╝
 # Visual Studio Settings
 .devcontainer/
 .vscode/
-# Coding Style
+
+# ╔════════════════╗
+# ╠  Coding Style  ╣
+# ╚════════════════╝
 .editorconfig
 .flake8
 .pycodestyle
 .pylintrc
 !tools/.pylintrc
 
+# ╔═══════════╗
+# ╠  Develop  ╣
+# ╚═══════════╝
+*.log
+dist/
+logs/
+media/
+secrets/
+
 # ╔══════════╗
 # ╠  Python  ╣
 # ╚══════════╝
 # python byte-compiled
-__pycache__/
 *.py[cod]
+__pycache__/
 # python package management
 poetry.lock
 pyproject.toml
-
-# ╔══════════╗
-# ╠  Secret  ╣
-# ╚══════════╝
-*.log
-logs/
-media/*
-secrets/

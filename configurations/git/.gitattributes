@@ -3,16 +3,17 @@
 # ╚═══════════╝
 # system or demo files
 *.doc* linguist-vendored
-*.xls* linguist-vendored
+*.jpg linguist-vendored
+*.log linguist-vendored
+*.png linguist-vendored
 *.ppt* linguist-vendored
 *.sql linguist-vendored
-*.webp linguist-vendored
-*.png linguist-vendored
-*.jpg linguist-vendored
 *.txt linguist-vendored
-*.log linguist-vendored
+*.webp linguist-vendored
+*.xls* linguist-vendored
 # documentation, develop files
 .docker/* linguist-vendored
+docs/* linguist-vendored
 documentation/* linguist-vendored
 logs/* linguist-vendored
 
@@ -21,6 +22,6 @@ logs/* linguist-vendored
 # ╚══════════╝
 # front end file
 apps/templates/* linguist-vendored
-templates/* linguist-vendored
 media/* linguist-vendored
 static/* linguist-vendored
+templates/* linguist-vendored

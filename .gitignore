@@ -1,9 +1,37 @@
-# Image Cache File in Windows OS
-Thumbs.db
-
-# Desktop Services Store in Mac OS
+# ╔══════════╗
+# ╠  System  ╣
+# ╚══════════╝
+# Mac: desktop services store
 .DS_Store
-
-# Google Cloud Sync
+# Windows: image cache file
+Thumbs.db
+# Google: google cloud sync
 .tmp.drivedownload/
 *.driveupload
+# folder structure force keep
+!**/.gitkeep
+
+# ╔══════════╗
+# ╠  Editor  ╣
+# ╚══════════╝
+# Visual Studio Settings
+.devcontainer/
+.vscode/
+
+# ╔════════════════╗
+# ╠  Coding Style  ╣
+# ╚════════════════╝
+.editorconfig
+.flake8
+.pycodestyle
+.pylintrc
+!tools/.pylintrc
+
+# ╔═══════════╗
+# ╠  Develop  ╣
+# ╚═══════════╝
+*.log
+dist/
+logs/
+media/
+secrets/
