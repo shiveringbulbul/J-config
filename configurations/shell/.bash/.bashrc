@@ -211,5 +211,7 @@ kbsec() {
 # ╔═════════╗
 # ╠  quick  ╣
 # ╚═════════╝
-# alias 2**專案**="cd /Users/jackal/Desktop/**專案**"
+# alias 2**專案**="cd /Users/jackal/Desktop/<project>"
 pj() { cd "/Users/jackal/Desktop/$@" }
+# tmp bind control U to backward-kill-line on MacOS
+bindkey \^U backward-kill-line
