@@ -18,6 +18,7 @@ init-hook="
           sys.path = [target] + envs + sys.path
           "
 load-plugins=pylint_django
+django-settings-module=DjangoRoot.settings
 persistent=yes
 rcfile=
 
