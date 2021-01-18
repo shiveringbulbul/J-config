@@ -4,7 +4,7 @@
 alias shut="sudo shutdown -h now"
 alias rebo="sudo reboot"
 alias hosts="less /etc/hosts"
-alias myip="echo -e \"Private IP: $(curl -s ipinfo.io/ip)\nGlobal  IP: $(ipconfig getifaddr en0)\""
+alias myip="echo -e \"Global  IP: $(curl -s ipinfo.io/ip)\nPrivate IP: $(ipconfig getifaddr en0)\""
 alias jalias="less ~/.bashrc"
 
 
@@ -51,7 +51,8 @@ alias gitls="git log --color=always | less"
 alias git7="git rev-parse --short HEAD"
 alias gitremote="git remote prune gitlab && git branch -r"
 alias gitgui="gitk"
-
+ssh-add ~/.ssh/id_ed25519-github
+ssh-add ~/.ssh/id_ed25519-gitlab
 
 # ╔══════════╗
 # ╠  python  ╣
