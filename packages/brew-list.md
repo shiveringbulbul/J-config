@@ -33,7 +33,7 @@ gist
 [//]: # (╠═══╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬════╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═══╣)
 
 
-brew cask install tableplus
+brew install --cask tableplus
 
 
 # ╔════════════╗
@@ -50,7 +50,7 @@ brew install caskroom/cask/brew-cask
 
 brew info **套件**
 brew search **套件**
-brew cask install **套件**
+brew install --cask **套件**
 brew cleanup —-prune 0
 - 更新標記可更新的 app  
 `brew update`
@@ -62,51 +62,52 @@ brew cleanup —-prune 0
 # 系統
 
 - 程式監控  
-`brew cask install sloth`  
+`brew install --cask sloth`  
 - 完全解除安裝  
-`brew cask install appcleaner`  
+`brew install --cask appcleaner`  
 - 系統設定備份  
 `brew install mackup`
 - 麥克風、攝影機，安全監控  
-`brew cask install oversight`  
+`brew install --cask oversight`  
 - 隱藏選單列  
-`brew cask install hiddenbar`  
+`brew install --cask hiddenbar`  
 - 截圖  
-`brew cask install snipaste`  
+`brew install --cask snipaste`  
 - 壓縮  
-`brew cask install the-unarchive`  
+`brew install --cask the-unarchive`  
 - 隨身硬碟  
-`brew cask install mounty`  
+`brew install --cask mounty`  
 
 
 <!-- ╠═══╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═════╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═══╣ -->
 # 介面
 
 - 視窗分割控制  
-`brew cask install spectacle`
+`brew install --cask spectacle`
 - 鍵盤快捷鍵修改  
-`brew cask install karabiner-elements`
+`brew install --cask karabiner-elements`
 
 
 <!-- ╠═══╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═════╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═══╣ -->
 #### 辦公
 
 - 文字編輯  
-`brew cask install textmate`  
+`brew install --cask textmate`  
 - 文書處理  
 `brew install jq`  
 `brew install rsync`  
 `brew install watch`  
-`brew cask install typora`  
-`brew cask install evernote`  
-`brew cask install teamviewer`  
-`brew cask install send-anywhere`  
-`brew cask install google-backup-and-sync`  
+`brew install --cask typora`  
+`brew install --cask evernote`  
+`brew install --cask teamviewer`  
+`brew install --cask send-anywhere`  
+`brew install --cask google-backup-and-sync`  
 - 瀏覽器
-`brew cask install opera`  
-`brew cask install google-chrome`  
+`brew install --cask opera`  
+`brew install --cask google-chrome`  
 - 通訊
-`brew cask install slack`  
+`brew install --cask discord`
+`brew install --cask slack`  
 
 
 <!-- ╠═══╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═════╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═══╣ -->
@@ -115,36 +116,36 @@ brew cleanup —-prune 0
 - 文字編輯  
 `brew install vim`  
 `brew install nano`  
-`brew cask install atom`  
-`brew cask install visual-studio-code`  
-`brew cask install vnc-viewer`
+`brew install --cask atom`  
+`brew install --cask visual-studio-code`  
+`brew install --cask vnc-viewer`
 - 版本控制輔助  
-`brew cask install fork`  
-`brew cask install https://raw.githubusercontent.com/Homebrew/homebrew-cask/6a96e5ea44803e52a43c0c89242390f75d1581ab/Casks/kdiff3.rb  # kdiff3`  
+`brew install --cask fork`  
+`brew install --cask https://raw.githubusercontent.com/Homebrew/homebrew-cask/6a96e5ea44803e52a43c0c89242390f75d1581ab/Casks/kdiff3.rb  # kdiff3`  
 - 主機管理  
-`brew cask install termius`  
+`brew install --cask termius`  
 `brew install google-cloud-sdk`  
 `brew install kubectl`  
 - 網路管理  
-`brew cask install wireshark`  
+`brew install --cask wireshark`  
 - 容器  
-`brew cask install docker`  
+`brew install --cask docker`  
 - API 調適  
-`brew cask install postman`  
+`brew install --cask postman`  
 
 
 #### 開發 - 資料庫
 
 - for all databases  
-`brew cask install dbeaver-community`
+`brew install --cask dbeaver-community`
 - for MySQL  
-`brew cask install sequel-pro`
+`brew install --cask sequel-pro`
 - for ER Modeling  
   <!-- name: lanyu -->
   <!-- key: 9bbd2251619a1b92966d0d48950df85f03520 -->
-`brew cask install dbschema`
+`brew install --cask dbschema`
 - for influxDB  
-`brew cask install grafana`
+`brew install --cask grafana`
 
 
 [x] iTerm 2
