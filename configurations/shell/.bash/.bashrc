@@ -51,8 +51,8 @@ alias gitls="git log --color=always | less"
 alias git7="git rev-parse --short HEAD"
 alias gitremote="git remote prune gitlab && git branch -r"
 alias gitgui="gitk"
-ssh-add ~/.ssh/id_ed25519-github
-ssh-add ~/.ssh/id_ed25519-gitlab
+ssh-add ~/.ssh/id_ed25519-github 2> /dev/null
+ssh-add ~/.ssh/id_ed25519-gitlab 2> /dev/null
 
 # ╔══════════╗
 # ╠  python  ╣
