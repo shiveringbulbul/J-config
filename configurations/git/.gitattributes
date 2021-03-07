@@ -1,7 +1,6 @@
 # ╔═══════════╗
 # ╠  Default  ╣
 # ╚═══════════╝
-# system or demo files
 *.doc* linguist-vendored
 *.jpg linguist-vendored
 *.log linguist-vendored
@@ -11,8 +10,13 @@
 *.txt linguist-vendored
 *.webp linguist-vendored
 *.xls* linguist-vendored
-# documentation, develop files
+
+# ╔═══════════╗
+# ╠  Develop  ╣
+# ╚═══════════╝
+.build/* linguist-vendored
 .docker/* linguist-vendored
+.kube/* linguist-vendored
 docs/* linguist-vendored
 documentation/* linguist-vendored
 logs/* linguist-vendored
@@ -20,8 +24,12 @@ logs/* linguist-vendored
 # ╔══════════╗
 # ╠  Python  ╣
 # ╚══════════╝
-# front end file
 apps/templates/* linguist-vendored
 media/* linguist-vendored
 static/* linguist-vendored
 templates/* linguist-vendored
+
+# ╔════════════╗
+# ╠  Personal  ╣
+# ╚════════════╝
+zen.*/* linguist-vendored

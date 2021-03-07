@@ -1,13 +1,13 @@
 # ╔══════════╗
 # ╠  System  ╣
 # ╚══════════╝
-# Mac: desktop services store
+# Desktop Services Store (Mac OS)
 .DS_Store
-# Windows: image cache file
+# Image Cache File (Windows OS)
 Thumbs.db
-# Google: google cloud sync
-.tmp.drivedownload/
+# Google Cloud Sync
 *.driveupload
+.tmp.drivedownload/
 # folder structure force keep
 !**/.gitkeep
 
@@ -27,21 +27,15 @@ Thumbs.db
 .pylintrc
 !tools/.pylintrc
 
-# ╔═══════════╗
-# ╠  Develop  ╣
-# ╚═══════════╝
-*.log
-dist/
-logs/
-media/
-secrets/
-
 # ╔══════════╗
 # ╠  Python  ╣
 # ╚══════════╝
-# python byte-compiled
 *.py[cod]
 __pycache__/
-# python package management
-poetry.lock
-pyproject.toml
+
+# ╔════════════╗
+# ╠  Personal  ╣
+# ╚════════════╝
+zen.Backup/
+zen.Log/
+zen.Secret/
