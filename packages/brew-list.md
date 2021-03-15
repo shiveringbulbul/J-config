@@ -75,8 +75,6 @@ brew cleanup —-prune 0
 `brew install --cask snipaste`  
 - 壓縮  
 `brew install --cask the-unarchive`  
-- 隨身硬碟  
-`brew install --cask mounty`  
 
 
 <!-- ╠═══╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═════╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═══╣ -->
@@ -97,7 +95,6 @@ brew cleanup —-prune 0
 `brew install jq`  
 `brew install rsync`  
 `brew install watch`  
-`brew install --cask typora`  
 `brew install --cask evernote`  
 `brew install --cask teamviewer`  
 `brew install --cask send-anywhere`  
