@@ -84,7 +84,7 @@ drun() {
 dexec() {
   if [ $# -le 1 ]
   then
-    docker exec -it $1 bash 2> /dev/null || docker exec -it $1 sh
+    docker exec -it $1 sh 2> /dev/null || docker exec -it $1 bash
   else
     docker exec -it $@
   fi
